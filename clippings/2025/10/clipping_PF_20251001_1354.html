@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipping - PF</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 30px 20px; text-align: center; }
+        .header h1 { font-size: 1.8em; margin-bottom: 10px; }
+        .header p { font-size: 0.9em; opacity: 0.95; margin: 5px 0; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 15px; padding: 20px; background: #f8f9fa; }
+        .stat-card { background: white; padding: 20px 10px; border-radius: 12px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .stat-card .number { font-size: 2.5em; font-weight: bold; color: #667eea; }
+        .stat-card .label { font-size: 0.9em; color: #666; margin-top: 5px; }
+        .stat-card.positivo .number { color: #4caf50; }
+        .stat-card.negativo .number { color: #ff9800; }
+        .stat-card.neutro .number { color: #2196f3; }
+        .news-section { padding: 20px; }
+        .news-section h2 { margin-bottom: 20px; color: #1e3c72; font-size: 1.5em; }
+        .news-card { background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 12px; border-left: 4px solid #667eea; position: relative; }
+        .sentimento-badge { position: absolute; top: 15px; right: 15px; padding: 5px 12px; border-radius: 20px; color: white; font-size: 0.8em; font-weight: 600; }
+        .news-title { font-size: 1.1em; color: #1e3c72; margin-bottom: 12px; font-weight: 600; line-height: 1.4; padding-right: 120px; }
+        .news-meta { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 12px; font-size: 0.85em; color: #666; }
+        .news-link { display: inline-block; background: #667eea; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.9em; }
+        .news-link:active { background: #5568d3; }
+        .portais-section { padding: 20px; background: #f8f9fa; }
+        .portais-section h2 { margin-bottom: 20px; color: #1e3c72; font-size: 1.5em; }
+        .portal-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .portal-name { font-weight: 600; color: #1e3c72; }
+        .portal-count { color: #667eea; font-weight: 500; }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.5em; }
+            .stat-card .number { font-size: 2em; }
+            .news-title { font-size: 1em; padding-right: 0; }
+            .sentimento-badge { position: static; display: inline-block; margin-bottom: 10px; }
+            .portal-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 Clipping de Notícias</h1>
+            <p>01/10/2025 - 13:54</p>
+            <p>Termo: PF</p>
+            <p>Coordenação-Geral de Comunicação Social da PF</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number">12</div>
+                <div class="label">Notícias</div>
+            </div>
+            <div class="stat-card positivo">
+                <div class="number">0</div>
+                <div class="label">✅ Positivas</div>
+            </div>
+            <div class="stat-card negativo">
+                <div class="number">8</div>
+                <div class="label">⚠️ Negativas</div>
+            </div>
+            <div class="stat-card neutro">
+                <div class="number">4</div>
+                <div class="label">📄 Neutras</div>
+            </div>
+        </div>
+        
+        <div class="news-section">
+            <h2>📋 Notícias</h2>
+            
+        <div class="news-card" style="border-left-color: #2196f3;">
+            <div class="sentimento-badge" style="background: #2196f3;">
+                📄 Neutro
+            </div>
+            <div class="news-title">PF realiza operação contra grupo que contrabandeava bebidas do Uruguai</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 12:35</span>
+                <span>🌐 CNN Brasil</span>
+            </div>
+            <a href="https://tinyurl.com/43d5b3hh" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #ff9800;">
+            <div class="sentimento-badge" style="background: #ff9800;">
+                ⚠️ Negativo
+            </div>
+            <div class="news-title">PF vai investigar ameaças a Dino após voto para condenar Bolsonaro; ‘guilhotina’, ‘bala’, ‘moer’</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 11:55</span>
+                <span>🌐 Estadão</span>
+            </div>
+            <a href="https://tinyurl.com/bdwme9a8" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #ff9800;">
+            <div class="sentimento-badge" style="background: #ff9800;">
+                ⚠️ Negativo
+            </div>
+            <div class="news-title">PF faz operação contra milícia ligada a deputado Binho Galinha; ele está foragido</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 11:21</span>
+                <span>🌐 CartaCapital</span>
+            </div>
+            <a href="https://tinyurl.com/yp94667b" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #2196f3;">
+            <div class="sentimento-badge" style="background: #2196f3;">
+                📄 Neutro
+            </div>
+            <div class="news-title">PF faz operação contra exploração sexual infantil em Minas</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 11:14</span>
+                <span>🌐 Estado de Minas</span>
+            </div>
+            <a href="https://tinyurl.com/48unaxx5" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #ff9800;">
+            <div class="sentimento-badge" style="background: #ff9800;">
+                ⚠️ Negativo
+            </div>
+            <div class="news-title">PF abre inquérito para apurar suposto envolvimento do Banco Master em crimes contra o sistema financeiro</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 10:20</span>
+                <span>🌐 G1</span>
+            </div>
+            <a href="https://tinyurl.com/3mscb9cp" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #ff9800;">
+            <div class="sentimento-badge" style="background: #ff9800;">
+                ⚠️ Negativo
+            </div>
+            <div class="news-title">PF questiona Moraes se ameaças a Dino devem ser investigadas em inquérito das milícias digitais</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 09:20</span>
+                <span>🌐 O Globo</span>
+            </div>
+            <a href="https://tinyurl.com/2vnstdx8" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #ff9800;">
+            <div class="sentimento-badge" style="background: #ff9800;">
+                ⚠️ Negativo
+            </div>
+            <div class="news-title">Pague a conta: PF investiga lotérica por desvio milionário na Caixa</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 09:11</span>
+                <span>🌐 Metrópoles</span>
+            </div>
+            <a href="https://tinyurl.com/2d87x7pz" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #2196f3;">
+            <div class="sentimento-badge" style="background: #2196f3;">
+                📄 Neutro
+            </div>
+            <div class="news-title">PF mapeia rede de espionagem russa na América Latina após prisões no Brasil</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 07:49</span>
+                <span>🌐 CNN Brasil</span>
+            </div>
+            <a href="https://tinyurl.com/shmvc3b8" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #ff9800;">
+            <div class="sentimento-badge" style="background: #ff9800;">
+                ⚠️ Negativo
+            </div>
+            <div class="news-title">PF faz operação contra milícia ligada a deputado estadual da Bahia</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 07:39</span>
+                <span>🌐 Metrópoles</span>
+            </div>
+            <a href="https://tinyurl.com/6d6jf6yj" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #2196f3;">
+            <div class="sentimento-badge" style="background: #2196f3;">
+                📄 Neutro
+            </div>
+            <div class="news-title">PF diz que há fortes evidências de que investigados foram avisados de operação contra PCC</div>
+            <div class="news-meta">
+                <span>📅 01/10/2025 - 07:00</span>
+                <span>🌐 Folha de S.Paulo</span>
+            </div>
+            <a href="https://tinyurl.com/m2bzatsv" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #ff9800;">
+            <div class="sentimento-badge" style="background: #ff9800;">
+                ⚠️ Negativo
+            </div>
+            <div class="news-title">PF vê possível ligação de ameaças a Dino e milícias digitais</div>
+            <div class="news-meta">
+                <span>📅 30/09/2025 - 18:25</span>
+                <span>🌐 CartaCapital</span>
+            </div>
+            <a href="https://tinyurl.com/22498zvp" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        <div class="news-card" style="border-left-color: #ff9800;">
+            <div class="sentimento-badge" style="background: #ff9800;">
+                ⚠️ Negativo
+            </div>
+            <div class="news-title">PF abre inquérito para apurar suspeita de crimes na gestão do Master e tentativa de compra pelo BRB</div>
+            <div class="news-meta">
+                <span>📅 30/09/2025 - 16:44</span>
+                <span>🌐 Estadão</span>
+            </div>
+            <a href="https://tinyurl.com/4famjytt" target="_blank" class="news-link">Ver notícia</a>
+        </div>
+        
+        </div>
+        
+        <div class="portais-section">
+            <h2>📊 Portais Mais Ativos</h2>
+            
+        <div class="portal-item">
+            <span class="portal-name">📰 Metrópoles</span>
+            <span class="portal-count">2 notícia(s) (17%)</span>
+        </div>
+        
+        <div class="portal-item">
+            <span class="portal-name">📰 CartaCapital</span>
+            <span class="portal-count">2 notícia(s) (17%)</span>
+        </div>
+        
+        <div class="portal-item">
+            <span class="portal-name">📰 Estadão</span>
+            <span class="portal-count">2 notícia(s) (17%)</span>
+        </div>
+        
+        <div class="portal-item">
+            <span class="portal-name">📰 CNN Brasil</span>
+            <span class="portal-count">2 notícia(s) (17%)</span>
+        </div>
+        
+        <div class="portal-item">
+            <span class="portal-name">📰 G1</span>
+            <span class="portal-count">1 notícia(s) (8%)</span>
+        </div>
+        
+        <div class="portal-item">
+            <span class="portal-name">📰 Folha de S.Paulo</span>
+            <span class="portal-count">1 notícia(s) (8%)</span>
+        </div>
+        
+        <div class="portal-item">
+            <span class="portal-name">📰 Estado de Minas</span>
+            <span class="portal-count">1 notícia(s) (8%)</span>
+        </div>
+        
+        <div class="portal-item">
+            <span class="portal-name">📰 O Globo</span>
+            <span class="portal-count">1 notícia(s) (8%)</span>
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>
