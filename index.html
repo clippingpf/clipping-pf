@@ -9,195 +9,160 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            min-height: 100vh;
+            background: #1a1a1a;
+            color: #e5d1c8;
             padding: 20px;
+            line-height: 1.6;
         }
-        .dashboard { max-width: 1400px; margin: 0 auto; }
+        .dashboard { max-width: 1200px; margin: 0 auto; }
         .header { 
-            background: rgba(255,255,255,0.95);
-            padding: 30px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-        }
-        .header h1 { color: #1e3c72; font-size: 2.5em; margin-bottom: 10px; }
-        .header p { color: #666; font-size: 1.1em; }
-        .stats-grid { 
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        .stat-box {
-            background: white;
-            padding: 30px;
+            background: #2d2d2d;
+            padding: 50px 40px;
             border-radius: 15px;
+            margin-bottom: 30px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            border: 1px solid #3d3d3d;
         }
-        .stat-box:hover { transform: translateY(-5px); }
-        .stat-number { font-size: 3em; font-weight: bold; margin-bottom: 10px; }
-        .stat-label { color: #666; font-size: 1.1em; }
-        .stat-box.total .stat-number { color: #667eea; }
-        .stat-box.positivo .stat-number { color: #4caf50; }
-        .stat-box.negativo .stat-number { color: #ff9800; }
-        .stat-box.neutro .stat-number { color: #2196f3; }
-        .content-grid {
+        .header h1 { color: #fec820; font-size: 3em; margin-bottom: 15px; font-weight: 700; }
+        .header p { color: #b49479; font-size: 1.2em; }
+        .stats-row {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
-        .panel {
-            background: white;
+        .stat-card {
+            background: #2d2d2d;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            border: 1px solid #3d3d3d;
         }
-        .panel h2 {
-            color: #1e3c72;
-            margin-bottom: 20px;
-            font-size: 1.8em;
+        .stat-number { font-size: 3em; font-weight: 700; color: #fec820; margin-bottom: 10px; }
+        .stat-label { color: #b49479; font-size: 1.1em; }
+        .section { 
+            background: #2d2d2d;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            border: 1px solid #3d3d3d;
         }
-        .noticia-mini {
-            background: #f8f9fa;
-            padding: 15px;
+        .section h2 { color: #fec820; margin-bottom: 25px; font-size: 1.8em; font-weight: 700; }
+        .clipping-item {
+            background: #1a1a1a;
+            padding: 20px;
             margin-bottom: 15px;
             border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-        .sentimento-mini {
-            float: right;
-            font-size: 1.5em;
-        }
-        .titulo-mini {
-            color: #1e3c72;
-            font-weight: 600;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-        .meta-mini {
-            color: #666;
-            font-size: 0.85em;
             display: flex;
-            gap: 15px;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #3d3d3d;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .historico-list {
-            list-style: none;
+        .clipping-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(254,200,32,0.2);
+            border-color: #fec820;
         }
-        .historico-list li {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        .historico-list a {
-            color: #667eea;
+        .clipping-icon { font-size: 2em; }
+        .clipping-info { flex: 1; }
+        .clipping-title { color: #e5d1c8; font-size: 1.2em; font-weight: 600; margin-bottom: 5px; }
+        .clipping-meta { color: #b49479; font-size: 0.9em; }
+        .clipping-btn {
+            background: #fec820;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border-radius: 6px;
             text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+            white-space: nowrap;
         }
-        .historico-list a:hover {
-            text-decoration: underline;
+        .clipping-btn:hover { background: #eda31e; }
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #b49479;
         }
+        .empty-state-icon { font-size: 4em; margin-bottom: 20px; opacity: 0.5; }
         .atualizado {
             text-align: center;
-            color: rgba(255,255,255,0.8);
-            margin-top: 20px;
+            color: #b49479;
+            margin-top: 30px;
             font-size: 0.9em;
         }
         @media (max-width: 768px) {
-            .content-grid { grid-template-columns: 1fr; }
-            .header h1 { font-size: 1.8em; }
+            .header h1 { font-size: 2em; }
+            .clipping-item { flex-direction: column; align-items: flex-start; }
+            .clipping-btn { width: 100%; text-align: center; }
         }
     </style>
 </head>
 <body>
     <div class="dashboard">
         <div class="header">
-            <h1>📊 Dashboard Executivo - Clipping PF</h1>
-            <p>Monitoramento em tempo real de notícias</p>
+            <h1>📊 Dashboard de Clippings</h1>
+            <p>Coordenação-Geral de Comunicação Social da PF</p>
         </div>
         
-        <div class="stats-grid">
-            <div class="stat-box total">
-                <div class="stat-number">12</div>
-                <div class="stat-label">📰 Total de Notícias</div>
-            </div>
-            <div class="stat-box positivo">
-                <div class="stat-number">0</div>
-                <div class="stat-label">✅ Positivas</div>
-            </div>
-            <div class="stat-box negativo">
-                <div class="stat-number">8</div>
-                <div class="stat-label">⚠️ Negativas</div>
-            </div>
-            <div class="stat-box neutro">
+        <div class="stats-row">
+            <div class="stat-card">
                 <div class="stat-number">4</div>
-                <div class="stat-label">📄 Neutras</div>
+                <div class="stat-label">Total de Clippings Registrados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">01/10</div>
+                <div class="stat-label">Data Atual</div>
             </div>
         </div>
         
-        <div class="content-grid">
-            <div class="panel">
-                <h2>🔥 Últimas Notícias</h2>
-                
-        <div class="noticia-mini" style="border-left: 4px solid #2196f3;">
-            <div class="sentimento-mini">📄</div>
-            <div class="titulo-mini">PF realiza operação contra grupo que contrabandeava bebidas do Uruguai...</div>
-            <div class="meta-mini">
-                <span>CNN Brasil</span>
-                <span>01/10/2025 - 12:35</span>
-            </div>
-        </div>
-        
-        <div class="noticia-mini" style="border-left: 4px solid #ff9800;">
-            <div class="sentimento-mini">⚠️</div>
-            <div class="titulo-mini">PF vai investigar ameaças a Dino após voto para condenar Bolsonaro; ‘guilhotina’, ‘bala’, ‘moer’...</div>
-            <div class="meta-mini">
-                <span>Estadão</span>
-                <span>01/10/2025 - 11:55</span>
-            </div>
-        </div>
-        
-        <div class="noticia-mini" style="border-left: 4px solid #ff9800;">
-            <div class="sentimento-mini">⚠️</div>
-            <div class="titulo-mini">PF faz operação contra milícia ligada a deputado Binho Galinha; ele está foragido...</div>
-            <div class="meta-mini">
-                <span>CartaCapital</span>
-                <span>01/10/2025 - 11:21</span>
-            </div>
-        </div>
-        
-        <div class="noticia-mini" style="border-left: 4px solid #2196f3;">
-            <div class="sentimento-mini">📄</div>
-            <div class="titulo-mini">PF faz operação contra exploração sexual infantil em Minas...</div>
-            <div class="meta-mini">
-                <span>Estado de Minas</span>
-                <span>01/10/2025 - 11:14</span>
-            </div>
-        </div>
-        
-        <div class="noticia-mini" style="border-left: 4px solid #ff9800;">
-            <div class="sentimento-mini">⚠️</div>
-            <div class="titulo-mini">PF abre inquérito para apurar suposto envolvimento do Banco Master em crimes contra o sistema financ...</div>
-            <div class="meta-mini">
-                <span>G1</span>
-                <span>01/10/2025 - 10:20</span>
-            </div>
-        </div>
-        
+        <div class="section">
+            <h2>📚 Histórico de Clippings</h2>
+            
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Pf</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 18:31</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_1831.html" target="_blank" class="clipping-btn">Ver clipping</a>
             </div>
             
-            <div class="panel">
-                <h2>📚 Histórico</h2>
-                <ul class="historico-list">
-                    <li><a href="clippings/2025/10/clipping_PF_20251001_1354.html" target="_blank">📄 clipping_PF_20251001_1354.html</a></li><li><a href="clippings/2025/10/clipping_PF_20251001_1341.html" target="_blank">📄 clipping_PF_20251001_1341.html</a></li>
-                </ul>
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Pf 20251001 1809.Html</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 18:09</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_1809.html" target="_blank" class="clipping-btn">Ver clipping</a>
             </div>
+            
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Pf 20251001 1354.Html</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 13:54</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_1354.html" target="_blank" class="clipping-btn">Ver clipping</a>
+            </div>
+            
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Pf 20251001 1341.Html</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 13:41</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_1341.html" target="_blank" class="clipping-btn">Ver clipping</a>
+            </div>
+            
         </div>
         
         <div class="atualizado">
-            Última atualização: 01/10/2025 às 13:54 | Auto-refresh a cada 5 minutos
+            Última atualização: 01/10/2025 às 18:31 (Horário de Brasília)<br>
+            Auto-refresh a cada 5 minutos
         </div>
     </div>
 </body>
