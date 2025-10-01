@@ -9,23 +9,23 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: #1f2127; /* Fundo Marinho Escuro */
-            color: #E0E3EB;
+            background: #006788; /* Azul Escuro */
+            color: #FFF1D0; /* Branco Cremoso */
             padding: 20px;
             line-height: 1.6;
         }
         .dashboard { max-width: 1200px; margin: 0 auto; }
         .header { 
-            background: #2b2e35;
+            background: #07ADC3; /* Azul Claro */
             padding: 50px 40px;
             border-radius: 15px;
             margin-bottom: 30px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            border: 1px solid #3d3d3d;
+            border: 1px solid #00506A;
         }
-        .header h1 { color: #ff9933; /* Laranja de Destaque */ font-size: 3em; margin-bottom: 15px; font-weight: 700; }
-        .header p { color: #b49479; font-size: 1.2em; }
+        .header h1 { color: #F0C808; /* Amarelo */ font-size: 3em; margin-bottom: 15px; font-weight: 700; }
+        .header p { color: #FFF1D0; font-size: 1.2em; }
         .stats-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -33,48 +33,48 @@
             margin-bottom: 40px;
         }
         .stat-card {
-            background: #2b2e35;
+            background: #07ADC3; /* Azul Claro */
             padding: 30px;
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            border: 1px solid #3d3d3d;
+            border: 1px solid #00506A;
         }
-        .stat-number { font-size: 3em; font-weight: 700; color: #ff9933; margin-bottom: 10px; }
-        .stat-label { color: #b49479; font-size: 1.1em; }
+        .stat-number { font-size: 3em; font-weight: 700; color: #F0C808; /* Amarelo */ margin-bottom: 10px; }
+        .stat-label { color: #FFF1D0; font-size: 1.1em; }
         .section { 
-            background: #2b2e35;
+            background: #07ADC3; /* Azul Claro */
             padding: 30px;
             border-radius: 12px;
             margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            border: 1px solid #3d3d3d;
+            border: 1px solid #00506A;
         }
-        .section h2 { color: #ff9933; margin-bottom: 25px; font-size: 1.8em; font-weight: 700; }
+        .section h2 { color: #F0C808; /* Amarelo */ margin-bottom: 25px; font-size: 1.8em; font-weight: 700; }
         .clipping-item {
-            background: #1f2127; /* Fundo do item mais escuro */
+            background: #006788; /* Azul Escuro para o item */
             padding: 20px;
             margin-bottom: 15px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             gap: 20px;
-            border: 1px solid #3d3d3d;
-            border-left: 4px solid #ff9933; /* Destaque lateral */
+            border: 1px solid #00506A;
+            border-left: 4px solid #F0C808; /* Amarelo para destaque lateral */
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .clipping-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,153,51,0.2);
-            border-color: #ff9933;
+            box-shadow: 0 6px 20px rgba(240,200,8,0.2);
+            border-color: #F0C808;
         }
         .clipping-icon { font-size: 2em; }
         .clipping-info { flex: 1; }
-        .clipping-title { color: #E0E3EB; font-size: 1.2em; font-weight: 600; margin-bottom: 5px; }
-        .clipping-meta { color: #b49479; font-size: 0.9em; }
+        .clipping-title { color: #FFF1D0; font-size: 1.2em; font-weight: 600; margin-bottom: 5px; }
+        .clipping-meta { color: #FFF1D0; font-size: 0.9em; }
         .clipping-btn {
-            background: #ff9933;
-            color: #1f2127;
+            background: #F0C808; /* Amarelo */
+            color: #006788; /* Azul Escuro para o texto do botão */
             padding: 10px 20px;
             border-radius: 6px;
             text-decoration: none;
@@ -82,16 +82,16 @@
             transition: background 0.2s;
             white-space: nowrap;
         }
-        .clipping-btn:hover { background: #e08022; }
+        .clipping-btn:hover { background: #E0B407; }
         .empty-state {
             text-align: center;
             padding: 60px 20px;
-            color: #b49479;
+            color: #FFF1D0;
         }
         .empty-state-icon { font-size: 4em; margin-bottom: 20px; opacity: 0.5; }
         .atualizado {
             text-align: center;
-            color: #b49479;
+            color: #FFF1D0;
             margin-top: 30px;
             font-size: 0.9em;
         }
@@ -111,7 +111,7 @@
         
         <div class="stats-row">
             <div class="stat-card">
-                <div class="stat-number">5</div>
+                <div class="stat-number">6</div>
                 <div class="stat-label">Total de Clippings Registrados</div>
             </div>
             <div class="stat-card">
@@ -122,6 +122,15 @@
         
         <div class="section">
             <h2>📚 Histórico de Clippings</h2>
+            
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Pf</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 18:51</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_1851.html" target="_blank" class="clipping-btn">Ver clipping</a>
+            </div>
             
             <div class="clipping-item">
                 <div class="clipping-icon">📄</div>
@@ -171,7 +180,7 @@
         </div>
         
         <div class="atualizado">
-            Última atualização: 01/10/2025 às 18:48 (Horário de Brasília)<br>
+            Última atualização: 01/10/2025 às 18:51 (Horário de Brasília)<br>
             Auto-refresh a cada 5 minutos
         </div>
     </div>
