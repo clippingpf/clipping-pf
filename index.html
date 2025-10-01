@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Clipping PF</title>
+    <meta http-equiv="refresh" content="300">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .dashboard { max-width: 1400px; margin: 0 auto; }
+        .header { 
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .header h1 { color: #1e3c72; font-size: 2.5em; margin-bottom: 10px; }
+        .header p { color: #666; font-size: 1.1em; }
+        .stats-grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .stat-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .stat-box:hover { transform: translateY(-5px); }
+        .stat-number { font-size: 3em; font-weight: bold; margin-bottom: 10px; }
+        .stat-label { color: #666; font-size: 1.1em; }
+        .stat-box.total .stat-number { color: #667eea; }
+        .stat-box.positivo .stat-number { color: #4caf50; }
+        .stat-box.negativo .stat-number { color: #ff9800; }
+        .stat-box.neutro .stat-number { color: #2196f3; }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .panel {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .panel h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .noticia-mini {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .sentimento-mini {
+            float: right;
+            font-size: 1.5em;
+        }
+        .titulo-mini {
+            color: #1e3c72;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .meta-mini {
+            color: #666;
+            font-size: 0.85em;
+            display: flex;
+            gap: 15px;
+        }
+        .historico-list {
+            list-style: none;
+        }
+        .historico-list li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .historico-list a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .historico-list a:hover {
+            text-decoration: underline;
+        }
+        .atualizado {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>📊 Dashboard Executivo - Clipping PF</h1>
+            <p>Monitoramento em tempo real de notícias</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-box total">
+                <div class="stat-number">10</div>
+                <div class="stat-label">📰 Total de Notícias</div>
+            </div>
+            <div class="stat-box positivo">
+                <div class="stat-number">0</div>
+                <div class="stat-label">✅ Positivas</div>
+            </div>
+            <div class="stat-box negativo">
+                <div class="stat-number">6</div>
+                <div class="stat-label">⚠️ Negativas</div>
+            </div>
+            <div class="stat-box neutro">
+                <div class="stat-number">4</div>
+                <div class="stat-label">📄 Neutras</div>
+            </div>
+        </div>
+        
+        <div class="content-grid">
+            <div class="panel">
+                <h2>🔥 Últimas Notícias</h2>
+                
+        <div class="noticia-mini" style="border-left: 4px solid #2196f3;">
+            <div class="sentimento-mini">📄</div>
+            <div class="titulo-mini">PF realiza operação contra grupo que contrabandeava bebidas do Uruguai...</div>
+            <div class="meta-mini">
+                <span>CNN Brasil</span>
+                <span>01/10/2025 - 12:35</span>
+            </div>
+        </div>
+        
+        <div class="noticia-mini" style="border-left: 4px solid #ff9800;">
+            <div class="sentimento-mini">⚠️</div>
+            <div class="titulo-mini">PF vai investigar ameaças a Dino após voto para condenar Bolsonaro; ‘guilhotina’, ‘bala’, ‘moer’...</div>
+            <div class="meta-mini">
+                <span>Estadão</span>
+                <span>01/10/2025 - 11:55</span>
+            </div>
+        </div>
+        
+        <div class="noticia-mini" style="border-left: 4px solid #ff9800;">
+            <div class="sentimento-mini">⚠️</div>
+            <div class="titulo-mini">PF faz operação contra milícia ligada a deputado Binho Galinha; ele está foragido...</div>
+            <div class="meta-mini">
+                <span>CartaCapital</span>
+                <span>01/10/2025 - 11:21</span>
+            </div>
+        </div>
+        
+        <div class="noticia-mini" style="border-left: 4px solid #2196f3;">
+            <div class="sentimento-mini">📄</div>
+            <div class="titulo-mini">PF faz operação contra exploração sexual infantil em Minas...</div>
+            <div class="meta-mini">
+                <span>Estado de Minas</span>
+                <span>01/10/2025 - 11:14</span>
+            </div>
+        </div>
+        
+        <div class="noticia-mini" style="border-left: 4px solid #ff9800;">
+            <div class="sentimento-mini">⚠️</div>
+            <div class="titulo-mini">PF abre inquérito para apurar suposto envolvimento do Banco Master em crimes contra o sistema financ...</div>
+            <div class="meta-mini">
+                <span>G1</span>
+                <span>01/10/2025 - 10:20</span>
+            </div>
+        </div>
+        
+            </div>
+            
+            <div class="panel">
+                <h2>📚 Histórico</h2>
+                <ul class="historico-list">
+                    <li><a href="clippings/2025/10/clipping_PF_20251001_1341.html" target="_blank">📄 clipping_PF_20251001_1341.html</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="atualizado">
+            Última atualização: 01/10/2025 às 13:41 | Auto-refresh a cada 5 minutos
+        </div>
+    </div>
+</body>
+</html>
