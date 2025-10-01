@@ -9,14 +9,14 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: #1a1a1a;
-            color: #e5d1c8;
+            background: #1f2127; /* Fundo Marinho Escuro */
+            color: #E0E3EB;
             padding: 20px;
             line-height: 1.6;
         }
         .dashboard { max-width: 1200px; margin: 0 auto; }
         .header { 
-            background: #2d2d2d;
+            background: #2b2e35;
             padding: 50px 40px;
             border-radius: 15px;
             margin-bottom: 30px;
@@ -24,7 +24,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
             border: 1px solid #3d3d3d;
         }
-        .header h1 { color: #fec820; font-size: 3em; margin-bottom: 15px; font-weight: 700; }
+        .header h1 { color: #ff9933; /* Laranja de Destaque */ font-size: 3em; margin-bottom: 15px; font-weight: 700; }
         .header p { color: #b49479; font-size: 1.2em; }
         .stats-row {
             display: grid;
@@ -33,26 +33,26 @@
             margin-bottom: 40px;
         }
         .stat-card {
-            background: #2d2d2d;
+            background: #2b2e35;
             padding: 30px;
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
             border: 1px solid #3d3d3d;
         }
-        .stat-number { font-size: 3em; font-weight: 700; color: #fec820; margin-bottom: 10px; }
+        .stat-number { font-size: 3em; font-weight: 700; color: #ff9933; margin-bottom: 10px; }
         .stat-label { color: #b49479; font-size: 1.1em; }
         .section { 
-            background: #2d2d2d;
+            background: #2b2e35;
             padding: 30px;
             border-radius: 12px;
             margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
             border: 1px solid #3d3d3d;
         }
-        .section h2 { color: #fec820; margin-bottom: 25px; font-size: 1.8em; font-weight: 700; }
+        .section h2 { color: #ff9933; margin-bottom: 25px; font-size: 1.8em; font-weight: 700; }
         .clipping-item {
-            background: #1a1a1a;
+            background: #1f2127; /* Fundo do item mais escuro */
             padding: 20px;
             margin-bottom: 15px;
             border-radius: 10px;
@@ -60,20 +60,21 @@
             align-items: center;
             gap: 20px;
             border: 1px solid #3d3d3d;
+            border-left: 4px solid #ff9933; /* Destaque lateral */
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .clipping-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(254,200,32,0.2);
-            border-color: #fec820;
+            box-shadow: 0 6px 20px rgba(255,153,51,0.2);
+            border-color: #ff9933;
         }
         .clipping-icon { font-size: 2em; }
         .clipping-info { flex: 1; }
-        .clipping-title { color: #e5d1c8; font-size: 1.2em; font-weight: 600; margin-bottom: 5px; }
+        .clipping-title { color: #E0E3EB; font-size: 1.2em; font-weight: 600; margin-bottom: 5px; }
         .clipping-meta { color: #b49479; font-size: 0.9em; }
         .clipping-btn {
-            background: #fec820;
-            color: #1a1a1a;
+            background: #ff9933;
+            color: #1f2127;
             padding: 10px 20px;
             border-radius: 6px;
             text-decoration: none;
@@ -81,7 +82,7 @@
             transition: background 0.2s;
             white-space: nowrap;
         }
-        .clipping-btn:hover { background: #eda31e; }
+        .clipping-btn:hover { background: #e08022; }
         .empty-state {
             text-align: center;
             padding: 60px 20px;
@@ -110,7 +111,7 @@
         
         <div class="stats-row">
             <div class="stat-card">
-                <div class="stat-number">4</div>
+                <div class="stat-number">5</div>
                 <div class="stat-label">Total de Clippings Registrados</div>
             </div>
             <div class="stat-card">
@@ -125,6 +126,15 @@
             <div class="clipping-item">
                 <div class="clipping-icon">📄</div>
                 <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Inss</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 18:48</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_INSS_20251001_1848.html" target="_blank" class="clipping-btn">Ver clipping</a>
+            </div>
+            
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
                     <div class="clipping-title">Clipping - Pf</div>
                     <div class="clipping-meta">Gerado em: 01/10/2025 - 18:31</div>
                 </div>
@@ -134,7 +144,7 @@
             <div class="clipping-item">
                 <div class="clipping-icon">📄</div>
                 <div class="clipping-info">
-                    <div class="clipping-title">Clipping - Pf 20251001 1809.Html</div>
+                    <div class="clipping-title">Clipping - Pf</div>
                     <div class="clipping-meta">Gerado em: 01/10/2025 - 18:09</div>
                 </div>
                 <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_1809.html" target="_blank" class="clipping-btn">Ver clipping</a>
@@ -143,7 +153,7 @@
             <div class="clipping-item">
                 <div class="clipping-icon">📄</div>
                 <div class="clipping-info">
-                    <div class="clipping-title">Clipping - Pf 20251001 1354.Html</div>
+                    <div class="clipping-title">Clipping - Pf</div>
                     <div class="clipping-meta">Gerado em: 01/10/2025 - 13:54</div>
                 </div>
                 <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_1354.html" target="_blank" class="clipping-btn">Ver clipping</a>
@@ -152,7 +162,7 @@
             <div class="clipping-item">
                 <div class="clipping-icon">📄</div>
                 <div class="clipping-info">
-                    <div class="clipping-title">Clipping - Pf 20251001 1341.Html</div>
+                    <div class="clipping-title">Clipping - Pf</div>
                     <div class="clipping-meta">Gerado em: 01/10/2025 - 13:41</div>
                 </div>
                 <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_1341.html" target="_blank" class="clipping-btn">Ver clipping</a>
@@ -161,7 +171,7 @@
         </div>
         
         <div class="atualizado">
-            Última atualização: 01/10/2025 às 18:31 (Horário de Brasília)<br>
+            Última atualização: 01/10/2025 às 18:48 (Horário de Brasília)<br>
             Auto-refresh a cada 5 minutos
         </div>
     </div>
