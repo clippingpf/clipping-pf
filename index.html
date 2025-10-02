@@ -9,8 +9,8 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: #1A1A1A; /* Cinza Escuro Suave */
-            color: #FFFFFF; /* Branco Puro */
+            background: #1e3c72; /* Cinza Escuro Suave */
+            color: white; /* Branco Puro */
             padding: 20px;
             line-height: 1.6;
         }
@@ -25,7 +25,7 @@
             border: 1px solid #444444;
         }
         .header h1 { color: #007BFF; /* Azul Vibrante */ font-size: 3em; margin-bottom: 15px; font-weight: 700; }
-        .header p { color: #FFFFFF; /* Branco Puro */ font-size: 1.2em; }
+        .header p { color: white; /* Branco Puro */ font-size: 1.2em; }
         .stats-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -41,7 +41,7 @@
             border: 1px solid #444444;
         }
         .stat-number { font-size: 3em; font-weight: 700; color: #007BFF; /* Azul Vibrante */ margin-bottom: 10px; }
-        .stat-label { color: #FFFFFF; /* Branco Puro */ font-size: 1.1em; }
+        .stat-label { color: white; /* Branco Puro */ font-size: 1.1em; }
         .section { 
             background: #9c9c9c; /* Cinza mais claro */
             padding: 30px;
@@ -52,7 +52,7 @@
         }
         .section h2 { color: #007BFF; /* Azul Vibrante */ margin-bottom: 25px; font-size: 1.8em; font-weight: 700; }
         .clipping-item {
-            background: #1A1A1A; /* Cinza Escuro Suave para o item */
+            background: #1e3c72; /* Cinza Escuro Suave para o item */
             padding: 20px;
             margin-bottom: 15px;
             border-radius: 10px;
@@ -70,11 +70,11 @@
         }
         .clipping-icon { font-size: 2em; }
         .clipping-info { flex: 1; }
-        .clipping-title { color: #FFFFFF; font-size: 1.2em; font-weight: 600; margin-bottom: 5px; }
+        .clipping-title { color: white; font-size: 1.2em; font-weight: 600; margin-bottom: 5px; }
         .clipping-meta { color: #BBBBBB; font-size: 0.9em; }
         .clipping-btn {
             background: #007BFF; /* Azul Vibrante para o botão de Ação */
-            color: #FFFFFF; /* Branco Puro para o texto do botão */
+            color: white; /* Branco Puro para o texto do botão */
             padding: 10px 20px;
             border-radius: 6px;
             text-decoration: none;
@@ -111,7 +111,7 @@
         
         <div class="stats-row">
             <div class="stat-card">
-                <div class="stat-number">11</div>
+                <div class="stat-number">12</div>
                 <div class="stat-label">Total de Clippings Registrados</div>
             </div>
             <div class="stat-card">
@@ -122,6 +122,15 @@
         
         <div class="section">
             <h2>📚 Histórico de Clippings</h2>
+            
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Pf</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 21:40</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/clipping_PF_20251001_2140.html" target="_blank" class="clipping-btn">Ver clipping</a>
+            </div>
             
             <div class="clipping-item">
                 <div class="clipping-icon">📄</div>
@@ -225,7 +234,7 @@
         </div>
         
         <div class="atualizado">
-            Última atualização: 01/10/2025 às 21:32 (Horário de Brasília)<br>
+            Última atualização: 01/10/2025 às 21:40 (Horário de Brasília)<br>
             Auto-refresh a cada 5 minutos
         </div>
     </div>
