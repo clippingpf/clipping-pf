@@ -1,24 +1,106 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Clippings</title><meta http-equiv="refresh" content="300">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Clipping PF</title>
+    <meta http-equiv="refresh" content="300">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; } body { font-family:'Poppins',sans-serif; background:#121212; color:#EAEAEA; padding:20px; }
-        .dashboard { max-width:1200px; margin:0 auto; } .header { background:#1E1E1E; padding:50px 40px; border-radius:15px; margin-bottom:30px; text-align:center; border:1px solid #333333; }
-        .header h1 { color:#00ADB5; font-size:3em; margin-bottom:15px; } .header p { color:#EAEAEA; font-size:1.2em; }
-        .section { background:#1E1E1E; padding:30px; border-radius:12px; margin-bottom:30px; border:1px solid #333333; }
-        .section h2 { color:#EAEAEA; margin-bottom:25px; font-size:1.8em; }
-        .clipping-item { background:#121212; padding:20px; margin-bottom:15px; border-radius:10px; display:flex; align-items:center; gap:20px; border:1px solid #333333; transition:all .2s ease; }
-        .clipping-item:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,173,181,.2); border-color:#00ADB5; }
-        .clipping-icon { font-size:2em; } .clipping-info { flex:1; } .clipping-title { font-size:1.2em; font-weight:600; }
-        .clipping-meta { color:#A0A0A0; font-size:0.9em; }
-        .clipping-btn { background:#00ADB5; color:#EAEAEA; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:600; transition:background .2s; white-space:nowrap; }
-        .clipping-btn:hover { background:#00C9D4; }
-        .atualizado { text-align:center; color:#A0A0A0; margin-top:30px; font-size:0.9em; }
-    </style></head><body><div class="dashboard"><div class="header"><h1>📊 Dashboard de Clippings</h1><p>Histórico de Notícias Geradas Automaticamente</p></div>
-    <div class="section"><h2>📚 Relatórios Recentes</h2><div class="clipping-item">
-            <div class="clipping-icon">📄</div>
-            <div class="clipping-info">
-                <div class="clipping-title">Clipping - Pf</div>
-                <div class="clipping-meta">Gerado em: 01/10/2025 - 22:21</div>
-            </div><a href="https://clippingpf.github.io/clipping-pf/clippings/2025/10/2025-10-01_2221_PF.html" target="_blank" class="clipping-btn">Ver clipping</a></div></div>
-    <div class="atualizado">Última atualização: 01/10/2025 às 22:21</div></div></body></html>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #121212;
+            color: #EAEAEA;
+            padding: 20px;
+        }
+        .dashboard { max-width: 1200px; margin: 0 auto; }
+        .header { 
+            background: #1E1E1E;
+            padding: 50px 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid #333333;
+        }
+        .header h1 { color: #00ADB5; font-size: 3em; margin-bottom: 15px; font-weight: 700; }
+        .header p { color: #EAEAEA; font-size: 1.2em; }
+        .section { 
+            background: #1E1E1E;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid #333333;
+        }
+        .section h2 { color: #EAEAEA; margin-bottom: 25px; font-size: 1.8em; font-weight: 700; }
+        .clipping-item {
+            background: #121212;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #333333;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+        .clipping-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 173, 181, 0.2);
+            border-color: #00ADB5;
+        }
+        .clipping-icon { font-size: 2em; }
+        .clipping-info { flex: 1; }
+        .clipping-title { color: #EAEAEA; font-size: 1.2em; font-weight: 600; margin-bottom: 5px; }
+        .clipping-meta { color: #A0A0A0; font-size: 0.9em; }
+        .clipping-btn {
+            background: #00ADB5;
+            color: #EAEAEA;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        .clipping-btn:hover { background: #00C9D4; }
+        .empty-state { text-align: center; padding: 60px 20px; color: #A0A0A0; }
+        .atualizado { text-align: center; color: #A0A0A0; margin-top: 30px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>📊 Dashboard de Clippings</h1>
+            <p>Coordenação-Geral de Comunicação Social da PF</p>
+        </div>
+        <div class="section">
+            <h2>📚 Histórico de Clippings</h2>
+            
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Pf</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 22:11</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/clipping_PF_20251001_2211.html" target="_blank" class="clipping-btn">Ver clipping</a>
+            </div>
+            
+            <div class="clipping-item">
+                <div class="clipping-icon">📄</div>
+                <div class="clipping-info">
+                    <div class="clipping-title">Clipping - Pf</div>
+                    <div class="clipping-meta">Gerado em: 01/10/2025 - 22:01</div>
+                </div>
+                <a href="https://clippingpf.github.io/clipping-pf/clippings/clipping_PF_20251001_2201.html" target="_blank" class="clipping-btn">Ver clipping</a>
+            </div>
+            
+        </div>
+        <div class="atualizado">
+            Última atualização: 01/10/2025 às 22:24 (Horário de Brasília)
+        </div>
+    </div>
+</body>
+</html>
