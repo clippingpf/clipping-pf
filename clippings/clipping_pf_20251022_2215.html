@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipping - pf</title>
+    <meta property="og:title" content="Clipping de Notícias" />
+    <meta property="og:description" content="Termo Pesquisado: pf | Gerado em 22/10/2025 às 22:15 (Brasília)" />
+    <meta property="og:image" content="https://www.gov.br/pf/pt-br/principios-fundamentais/simbolos-da-policia-federal-2/emblema.png/@@images/image" />
+    <meta property="og:type" content="article" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Poppins', sans-serif; background-color: #121212; background-image: radial-gradient(circle at 1% 1%, rgba(0, 173, 181, 0.1), rgba(0,0,0,0) 30%); padding: 20px; color: #EAEAEA; line-height: 1.7; }
+        .container { max-width: 1400px; margin: 0 auto; } .header { background: rgba(30, 30, 30, 0.7); backdrop-filter: blur(10px); padding: 40px; border-radius: 16px; margin-bottom: 30px; text-align: center; border: 1px solid #333333; }
+        .header h1 { font-size: 2.8em; margin-bottom: 10px; font-weight: 700; color: #FFFFFF; } .header p { color: #A0A0A0; font-size: 1.1em; margin-top: 5px; } .highlight { color: #00ADB5; font-weight: 600; }
+        .stats-grid, .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px; }
+        .stat-card, .chart-card { background: #1E1E1E; padding: 30px; border-radius: 12px; text-align: center; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .stat-card:hover, .chart-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 173, 181, 0.2); }
+        .stat-number { font-size: 3.5em; font-weight: 700; color: #00ADB5; margin-bottom: 5px; } .stat-label { color: #A0A0A0; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px;}
+        .chart-card h3 { color: #EAEAEA; margin-bottom: 20px; font-size: 1.4em; font-weight: 600;} .chart-wrapper { position: relative; height: 320px; }
+        .news-section h2 { color: #FFFFFF; margin-bottom: 25px; font-size: 2.2em; font-weight: 700; border-bottom: 2px solid #00ADB5; padding-bottom: 10px; display: inline-block; }
+        .news-card { background: #1E1E1E; padding: 25px 30px; margin-bottom: 20px; border-radius: 12px; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, border-color 0.3s ease; }
+        .news-card:hover { transform: translateY(-3px); border-color: #00ADB5; } .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .categoria-badge { background: #00ADB5; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; font-weight: 600; text-transform: uppercase; }
+        .news-portal { font-size: 0.9em; color: #A0A0A0; } .news-title { font-size: 1.4em; color: #EAEAEA; margin-bottom: 10px; font-weight: 600; line-height: 1.4; }
+        .news-meta { font-size: 0.9em; color: #A0A0A0; margin-bottom: 20px; } .news-link { display: inline-block; background: transparent; color: #00ADB5; padding: 10px 0; text-decoration: none; font-weight: 600; transition: color 0.2s ease, transform 0.2s ease; }
+        .news-link:hover { color: #00C9D4; transform: translateX(5px); }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #121212; } ::-webkit-scrollbar-thumb { background-color: #333333; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background-color: #00ADB5; }
+    </style></head><body><div class="container">
+        <header class="header"><h1>Clipping de Notícias</h1><p>Termo Pesquisado: <span class="highlight">pf</span></p><p>22/10/2025 às 22:15 (Brasília)</p></header>
+        <main><section class="stats-grid"><div class="stat-card"><div class="stat-number">6</div><div class="stat-label">Notícias</div></div>
+        <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Portais</div></div>
+        <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">Categorias</div></div></section>
+        <section class="charts-grid"><div class="chart-card"><h3>📊 Análise por Categoria</h3><div class="chart-wrapper"><canvas id="chartCategorias"></canvas></div></div>
+        <div class="chart-card"><h3>📰 Portais Mais Ativos</h3><div class="chart-wrapper"><canvas id="chartPortais"></canvas></div></div></section>
+        <section class="news-section"><h2>📋 Lista de Notícias</h2><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Polícia Federal prende na Zona Sul do Rio suspeito de compartilhar na internet arquivos de abuso sexual infantil</h3><div class="news-meta"><span>📅 22/10/2025 - 19:33</span></div>
+            <a href="https://tinyurl.com/faume2xd" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Funcionário público é preso pela PF com dezenas de notas falsas em Guarujá, SP</h3><div class="news-meta"><span>📅 22/10/2025 - 18:28</span></div>
+            <a href="https://tinyurl.com/53emkbjk" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">PF mira suspeito de vender minérios de garimpo ilegal na Terra Yanomami</h3><div class="news-meta"><span>📅 22/10/2025 - 13:02</span></div>
+            <a href="https://tinyurl.com/mvvb8ddk" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Entregador de Franca, SP, é preso em operação da PF contra tráfico internacional de armas e drogas</h3><div class="news-meta"><span>📅 22/10/2025 - 12:37</span></div>
+            <a href="https://tinyurl.com/sjdhtwdw" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">Deputado pede investigação de delegados da PF após caso Filipe Martins</h3><div class="news-meta"><span>📅 22/10/2025 - 11:30</span></div>
+            <a href="https://tinyurl.com/5hyfvbz3" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Operação contra tráfico transnacional cumpre mandados em MS e mais quatro estados</h3><div class="news-meta"><span>📅 22/10/2025 - 10:51</span></div>
+            <a href="https://tinyurl.com/mv3t9552" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div></section></main></div>
+    <script>
+        window.addEventListener('load', function() {
+            const primaryColor = '#00ADB5', gridColor = 'rgba(255, 255, 255, 0.1)', textColor = '#EAEAEA', secondaryTextColor = '#A0A0A0';
+            const chartColors = ['#00ADB5', '#393E46', '#4E8D7C', '#F39C12', '#E74C3C', '#9B59B6'];
+            const ctxCat = document.getElementById('chartCategorias'); if (ctxCat) new Chart(ctxCat, { type: 'doughnut', data: { labels: ["Seguran\u00e7a P\u00fablica"], datasets: [{ data: [6], backgroundColor: chartColors, borderColor: '#1E1E1E', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: secondaryTextColor, padding: 15 } } } } });
+            const ctxPort = document.getElementById('chartPortais'); if (ctxPort) new Chart(ctxPort, { type: 'bar', data: { labels: ["G1", "CNN Brasil", "O Globo"], datasets: [{ data: [4, 1, 1], backgroundColor: primaryColor, borderRadius: 4 }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { ticks: { color: secondaryTextColor }, grid: { color: gridColor } }, x: { ticks: { color: secondaryTextColor }, grid: { color: 'transparent' } } } } });
+        });
+    </script></body></html>
