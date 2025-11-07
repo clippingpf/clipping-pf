@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipping - "PF" and "COP30"</title>
+    <meta property="og:title" content="Clipping de Notícias" />
+    <meta property="og:description" content="Termo Pesquisado: "PF" and "COP30" | Gerado em 07/11/2025 às 08:44 (Brasília)" />
+    <meta property="og:image" content="https://www.gov.br/pf/pt-br/principios-fundamentais/simbolos-da-policia-federal-2/emblema.png/@@images/image" />
+    <meta property="og:type" content="article" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Poppins', sans-serif; background-color: #121212; background-image: radial-gradient(circle at 1% 1%, rgba(0, 173, 181, 0.1), rgba(0,0,0,0) 30%); padding: 20px; color: #EAEAEA; line-height: 1.7; }
+        .container { max-width: 1400px; margin: 0 auto; } .header { background: rgba(30, 30, 30, 0.7); backdrop-filter: blur(10px); padding: 40px; border-radius: 16px; margin-bottom: 30px; text-align: center; border: 1px solid #333333; }
+        .header h1 { font-size: 2.8em; margin-bottom: 10px; font-weight: 700; color: #FFFFFF; } .header p { color: #A0A0A0; font-size: 1.1em; margin-top: 5px; } .highlight { color: #00ADB5; font-weight: 600; }
+        .stats-grid, .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px; }
+        .stat-card, .chart-card { background: #1E1E1E; padding: 30px; border-radius: 12px; text-align: center; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .stat-card:hover, .chart-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 173, 181, 0.2); }
+        .stat-number { font-size: 3.5em; font-weight: 700; color: #00ADB5; margin-bottom: 5px; } .stat-label { color: #A0A0A0; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px;}
+        .chart-card h3 { color: #EAEAEA; margin-bottom: 20px; font-size: 1.4em; font-weight: 600;} .chart-wrapper { position: relative; height: 320px; }
+        .news-section h2 { color: #FFFFFF; margin-bottom: 25px; font-size: 2.2em; font-weight: 700; border-bottom: 2px solid #00ADB5; padding-bottom: 10px; display: inline-block; }
+        .news-card { background: #1E1E1E; padding: 25px 30px; margin-bottom: 20px; border-radius: 12px; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, border-color 0.3s ease; }
+        .news-card:hover { transform: translateY(-3px); border-color: #00ADB5; } .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .categoria-badge { background: #00ADB5; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; font-weight: 600; text-transform: uppercase; }
+        .news-portal { font-size: 0.9em; color: #A0A0A0; } .news-title { font-size: 1.4em; color: #EAEAEA; margin-bottom: 10px; font-weight: 600; line-height: 1.4; }
+        .news-meta { font-size: 0.9em; color: #A0A0A0; margin-bottom: 20px; } .news-link { display: inline-block; background: transparent; color: #00ADB5; padding: 10px 0; text-decoration: none; font-weight: 600; transition: color 0.2s ease, transform 0.2s ease; }
+        .news-link:hover { color: #00C9D4; transform: translateX(5px); }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #121212; } ::-webkit-scrollbar-thumb { background-color: #333333; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background-color: #00ADB5; }
+    </style></head><body><div class="container">
+        <header class="header"><h1>Clipping de Notícias</h1><p>Termo Pesquisado: <span class="highlight">"PF" and "COP30"</span></p><p>07/11/2025 às 08:44 (Brasília)</p></header>
+        <main><section class="stats-grid"><div class="stat-card"><div class="stat-number">59</div><div class="stat-label">Notícias</div></div>
+        <div class="stat-card"><div class="stat-number">34</div><div class="stat-label">Portais</div></div>
+        <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Categorias</div></div></section>
+        <section class="charts-grid"><div class="chart-card"><h3>📊 Análise por Categoria</h3><div class="chart-wrapper"><canvas id="chartCategorias"></canvas></div></div>
+        <div class="chart-card"><h3>📰 Portais Mais Ativos</h3><div class="chart-wrapper"><canvas id="chartPortais"></canvas></div></div></section>
+        <section class="news-section"><h2>📋 Lista de Notícias</h2><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 estadodoparaonline.com</span></div>
+            <h3 class="news-title">PF neutraliza 31 drones irregulares em áreas de segurança da COP30 em Belém - Estado do Pará Online</h3><div class="news-meta"><span>📅 05/11/2025 - 20:31</span></div>
+            <a href="https://tinyurl.com/5h2thn49" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF realiza reunião com efetivo para abertura oficial da operação de segurança da COP30 — Polícia Federal</h3><div class="news-meta"><span>📅 05/11/2025 - 19:17</span></div>
+            <a href="https://tinyurl.com/yh9hycv2" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.oliberal.com</span></div>
+            <h3 class="news-title">PF impede mais de 30 tentativas de sobrevoo irregular de drones em áreas sensíveis da COP30 | Polícia | O Liberal - O Liberal</h3><div class="news-meta"><span>📅 05/11/2025 - 19:04</span></div>
+            <a href="https://tinyurl.com/2x96jwfk" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 diariodopara.com.br</span></div>
+            <h3 class="news-title">PF reforça ações contra drones não autorizados na COP30</h3><div class="news-meta"><span>📅 05/11/2025 - 18:55</span></div>
+            <a href="https://tinyurl.com/yvyatxjr" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Valor Econômico</span></div>
+            <h3 class="news-title">PF identifica 316 drones em sobrevoos não autorizados em áreas sensíveis para a COP30</h3><div class="news-meta"><span>📅 05/11/2025 - 18:49</span></div>
+            <a href="https://tinyurl.com/3f2u4956" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">PF identifica mais de 300 drones irregulares durante operações de segurança para a COP30 em Belém</h3><div class="news-meta"><span>📅 05/11/2025 - 18:03</span></div>
+            <a href="https://tinyurl.com/2h7sbukz" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 dol.com.br</span></div>
+            <h3 class="news-title">PF assume comando da segurança durante a COP30 em Belém - DOL</h3><div class="news-meta"><span>📅 05/11/2025 - 15:28</span></div>
+            <a href="https://tinyurl.com/3j77rs6c" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Veja</span></div>
+            <h3 class="news-title">PF define focos de atenção durante a COP30 - veja.abril.com.br</h3><div class="news-meta"><span>📅 05/11/2025 - 14:20</span></div>
+            <a href="https://tinyurl.com/5e54kj3n" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Metrópoles</span></div>
+            <h3 class="news-title">PF assume coordenação da segurança pública da COP30, em Belém</h3><div class="news-meta"><span>📅 05/11/2025 - 12:53</span></div>
+            <a href="https://tinyurl.com/34vxpfra" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 tvbrasil.ebc.com.br</span></div>
+            <h3 class="news-title">COP30: PF e FAB detalham esquema de segurança - TV Brasil |</h3><div class="news-meta"><span>📅 05/11/2025 - 12:45</span></div>
+            <a href="https://tinyurl.com/m5jdm4nx" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">Polícia Federal assume a coordenação geral da segurança pública na COP30</h3><div class="news-meta"><span>📅 05/11/2025 - 11:12</span></div>
+            <a href="https://tinyurl.com/5n8s7ctb" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 veronoticias.com</span></div>
+            <h3 class="news-title">PF inicia monitoramento de navios da COP30 - Vero Notícias</h3><div class="news-meta"><span>📅 05/11/2025 - 00:30</span></div>
+            <a href="https://tinyurl.com/4p8dppb3" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 diariodoacre.com.br</span></div>
+            <h3 class="news-title">PF frustra transporte de cocaína em Belém e intensifica vigilância para COP30</h3><div class="news-meta"><span>📅 04/11/2025 - 21:35</span></div>
+            <a href="https://tinyurl.com/37v43ra9" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 contilnetnoticias.com.br</span></div>
+            <h3 class="news-title">PF inicia monitoramento de navios que hospedam participantes da COP30 - ContilNet Notícias - ContilNet Notícias</h3><div class="news-meta"><span>📅 04/11/2025 - 20:05</span></div>
+            <a href="https://tinyurl.com/s5fjtzs8" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 portalmatogrosso.com.br</span></div>
+            <h3 class="news-title">PF participa de ação integrada visando à segurança da COP30 - portal mato grosso</h3><div class="news-meta"><span>📅 04/11/2025 - 19:54</span></div>
+            <a href="https://tinyurl.com/4a3k3zwv" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Metrópoles</span></div>
+            <h3 class="news-title">PF inicia monitoramento de navios que hospedam participantes da COP30</h3><div class="news-meta"><span>📅 04/11/2025 - 19:29</span></div>
+            <a href="https://tinyurl.com/mtkn9kns" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.romanews.com.br</span></div>
+            <h3 class="news-title">COP30: PF inicia migração de tripulantes de cruzeiros em Outeiro - romanews.com.br</h3><div class="news-meta"><span>📅 04/11/2025 - 18:36</span></div>
+            <a href="https://tinyurl.com/4x337k7j" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.romanews.com.br</span></div>
+            <h3 class="news-title">PF assume credenciamento rigoroso para impedir acesso indevido na COP30 em Belém - romanews.com.br</h3><div class="news-meta"><span>📅 04/11/2025 - 17:23</span></div>
+            <a href="https://tinyurl.com/bddv3tpd" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF participa de ação integrada visando à segurança da COP30 — Polícia Federal</h3><div class="news-meta"><span>📅 04/11/2025 - 17:01</span></div>
+            <a href="https://tinyurl.com/2p9u7m44" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">Todos aspectos de segurança serão executados na COP30, diz delegado da PF</h3><div class="news-meta"><span>📅 04/11/2025 - 15:01</span></div>
+            <a href="https://tinyurl.com/65a5rekk" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Política</span><span class="news-portal">🌐 edenevaldoalves.com.br</span></div>
+            <h3 class="news-title">COP30: Governo recebeu alerta de ataques do Comando Vermelho no Pará - Edenevaldo Alves</h3><div class="news-meta"><span>📅 04/11/2025 - 14:34</span></div>
+            <a href="https://tinyurl.com/yfh59fv9" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF faz credenciamento para a COP30 — Polícia Federal</h3><div class="news-meta"><span>📅 04/11/2025 - 14:26</span></div>
+            <a href="https://tinyurl.com/2s4z5ckr" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.portaldoholanda.com.br</span></div>
+            <h3 class="news-title">PF alerta para risco de ataques do CV durante COP30 em Belém - Portal do Holanda</h3><div class="news-meta"><span>📅 04/11/2025 - 12:23</span></div>
+            <a href="https://tinyurl.com/44vzwrjs" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Política</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">COP30: Governo recebeu alerta de ataques do Comando Vermelho no Pará</h3><div class="news-meta"><span>📅 04/11/2025 - 10:29</span></div>
+            <a href="https://tinyurl.com/4ccw9338" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 fatoamazonico.com.br</span></div>
+            <h3 class="news-title">PF reforça segurança da COP30: Manaus abriga Centro de Cooperação Policial Internacional - Fato Amazônico</h3><div class="news-meta"><span>📅 04/11/2025 - 09:56</span></div>
+            <a href="https://tinyurl.com/4ztsznnf" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.folhadoprogresso.com.br</span></div>
+            <h3 class="news-title">Lancha blindada da PF está em Belém para atuar em situações de alto risco na COP30 - folhadoprogresso.com.br</h3><div class="news-meta"><span>📅 04/11/2025 - 09:15</span></div>
+            <a href="https://tinyurl.com/39rv66pf" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 nahoradanoticia.com.br</span></div>
+            <h3 class="news-title">Lancha tática blindada da PF reforça segurança para a COP30 em Belém - Na Hora da Notícia</h3><div class="news-meta"><span>📅 04/11/2025 - 00:07</span></div>
+            <a href="https://tinyurl.com/48uhhkzf" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gazetacarajas.com</span></div>
+            <h3 class="news-title">PF inspeciona veículos oficiais usados para transporte de autoridades da COP30 - Gazeta Carajás</h3><div class="news-meta"><span>📅 30/10/2025 - 12:13</span></div>
+            <a href="https://tinyurl.com/u2cpuspp" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.folhadoprogresso.com.br</span></div>
+            <h3 class="news-title">PF mobiliza atiradores de elite para segurança da COP30 - folhadoprogresso.com.br</h3><div class="news-meta"><span>📅 06/11/2025 - 18:07</span></div>
+            <a href="https://tinyurl.com/6cbcxbw4" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 portalofato.com.br</span></div>
+            <h3 class="news-title">Durante operação da COP30, PF prende mulher por tráfico interestadual de drogas</h3><div class="news-meta"><span>📅 06/11/2025 - 16:23</span></div>
+            <a href="https://tinyurl.com/2s4b2tpp" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.rondoniaovivo.com</span></div>
+            <h3 class="news-title">FISCALIZAÇÃO COP30: PF prende mulher com 22 kg de droga no Aeroporto Internacional de Belém - Rondoniaovivo.com</h3><div class="news-meta"><span>📅 06/11/2025 - 16:02</span></div>
+            <a href="https://tinyurl.com/wa7c3pcf" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 estadodoparaonline.com</span></div>
+            <h3 class="news-title">COP30: PF escolta presidente da França em visita à UFPA em Belém - Estado do Pará Online</h3><div class="news-meta"><span>📅 06/11/2025 - 15:56</span></div>
+            <a href="https://tinyurl.com/zh9f2kar" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 diariodoacre.com.br</span></div>
+            <h3 class="news-title">Durante a COP30, PF prende mulher com 22 kg de maconha no aeroporto de Belém</h3><div class="news-meta"><span>📅 06/11/2025 - 15:23</span></div>
+            <a href="https://tinyurl.com/4k5skeyj" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Resumão diário #1733: Na COP30, Lula critica negacionismo; Prefeito de Sorocaba é afastado em operação da PF e mais</h3><div class="news-meta"><span>📅 06/11/2025 - 13:57</span></div>
+            <a href="https://tinyurl.com/47jzxk7c" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF mobiliza estrutura logística inédita para a COP30 — Polícia Federal</h3><div class="news-meta"><span>📅 06/11/2025 - 13:39</span></div>
+            <a href="https://tinyurl.com/kk4k52k2" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Metrópoles</span></div>
+            <h3 class="news-title">Snipers da PF são acionados para ajudar na segurança da COP30</h3><div class="news-meta"><span>📅 06/11/2025 - 13:05</span></div>
+            <a href="https://tinyurl.com/xupwunej" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF mobiliza atiradores de elite para segurança da COP30 — Polícia Federal</h3><div class="news-meta"><span>📅 06/11/2025 - 11:22</span></div>
+            <a href="https://tinyurl.com/3byy4shy" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 correiodobrasil.com.br</span></div>
+            <h3 class="news-title">Operação da PF Intercepta Drones em Belém na COP30</h3><div class="news-meta"><span>📅 06/11/2025 - 11:09</span></div>
+            <a href="https://tinyurl.com/bdeajua2" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 ultimosegundo.ig.com.br</span></div>
+            <h3 class="news-title">PF neutraliza 31 drones em voos irregulares durante a COP30 - Portal iG</h3><div class="news-meta"><span>📅 06/11/2025 - 09:45</span></div>
+            <a href="https://tinyurl.com/27xsw5v4" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.pontaporainforma.com.br</span></div>
+            <h3 class="news-title">PF realiza fiscalização da segurança privada na Blue Zone da COP30 - Ponta Porã Informa - Notícias de Ponta - Ponta Porã Informa</h3><div class="news-meta"><span>📅 06/11/2025 - 09:00</span></div>
+            <a href="https://tinyurl.com/38h9bcw2" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.brasil247.com</span></div>
+            <h3 class="news-title">PF 'neutraliza' 31 drones em áreas sensíveis da COP30 - Brasil 247</h3><div class="news-meta"><span>📅 06/11/2025 - 08:13</span></div>
+            <a href="https://tinyurl.com/35etmc95" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Agentes da PF neutralizam 31 drones em voos irregulares durante a COP30</h3><div class="news-meta"><span>📅 06/11/2025 - 07:52</span></div>
+            <a href="https://tinyurl.com/yj6uw92r" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF realiza fiscalização da segurança privada na Blue Zone da COP30 — Polícia Federal</h3><div class="news-meta"><span>📅 06/11/2025 - 07:46</span></div>
+            <a href="https://tinyurl.com/4vkubcue" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Lancha blindada da PF está em Belém para atuar em situações de alto risco na COP30</h3><div class="news-meta"><span>📅 02/11/2025 - 18:51</span></div>
+            <a href="https://tinyurl.com/mrxatv88" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.metro1.com.br</span></div>
+            <h3 class="news-title">PF irá coordenar ações antidrone e segurança de Lula na COP30 - metro1.com.br</h3><div class="news-meta"><span>📅 01/11/2025 - 17:31</span></div>
+            <a href="https://tinyurl.com/5xa38h7r" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">PF irá coordenar ações anti-drone durante a COP30</h3><div class="news-meta"><span>📅 01/11/2025 - 16:06</span></div>
+            <a href="https://tinyurl.com/bdejbbdn" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 rdmonline.com.br</span></div>
+            <h3 class="news-title">PF coordena ações anti-drone para defesa de instalações sensíveis durante a COP30 em Belém</h3><div class="news-meta"><span>📅 01/11/2025 - 15:31</span></div>
+            <a href="https://tinyurl.com/5n8nny32" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Veja</span></div>
+            <h3 class="news-title">PF vai coordenar centro anti-drone durante COP30 em Belém - veja.abril.com.br</h3><div class="news-meta"><span>📅 01/11/2025 - 15:24</span></div>
+            <a href="https://tinyurl.com/2u2reb24" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF coordena ações anti-drone para defesa de instalações sensíveis durante a COP30 em Belém — Polícia Federal</h3><div class="news-meta"><span>📅 01/11/2025 - 14:06</span></div>
+            <a href="https://tinyurl.com/4kn2pc6v" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 diariodopara.com.br</span></div>
+            <h3 class="news-title">PF treina 1,3 mil voluntários para segurança da COP30 em Belém</h3><div class="news-meta"><span>📅 01/11/2025 - 10:09</span></div>
+            <a href="https://tinyurl.com/yc7fkped" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 diariodopara.com.br</span></div>
+            <h3 class="news-title">PF cria Centro de Cooperação Policial Internacional para COP30</h3><div class="news-meta"><span>📅 03/11/2025 - 19:22</span></div>
+            <a href="https://tinyurl.com/3t7tzmvu" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">Entenda como PF atuará na proteção de autoridades durante a COP30</h3><div class="news-meta"><span>📅 03/11/2025 - 12:03</span></div>
+            <a href="https://tinyurl.com/ezuvvk2x" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 R7</span></div>
+            <h3 class="news-title">PF inicia migração de tripulantes para a COP30</h3><div class="news-meta"><span>📅 03/11/2025 - 12:01</span></div>
+            <a href="https://tinyurl.com/34v3aj7h" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 ac24horas.com</span></div>
+            <h3 class="news-title">Lancha tática blindada da PF reforça segurança da COP30 em Belém | ac24horas | Notícias do Acre - ac24horas</h3><div class="news-meta"><span>📅 03/11/2025 - 09:53</span></div>
+            <a href="https://tinyurl.com/2jf6c5c5" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF concede porte de arma provisório a policiais estrangeiros durante a COP30 — Polícia Federal</h3><div class="news-meta"><span>📅 31/10/2025 - 11:12</span></div>
+            <a href="https://tinyurl.com/35656tmb" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.gov.br</span></div>
+            <h3 class="news-title">PF participa de treinamento dos voluntários da COP30 — Polícia Federal</h3><div class="news-meta"><span>📅 31/10/2025 - 10:52</span></div>
+            <a href="https://tinyurl.com/5a4bdsty" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.msn.com</span></div>
+            <h3 class="news-title">PF e governo do Pará lançam carimbo comemorativo da COP30 em Belém - MSN</h3><div class="news-meta"><span>📅 30/10/2025 - 21:10</span></div>
+            <a href="https://tinyurl.com/2rmvu7pu" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 www.brasil247.com</span></div>
+            <h3 class="news-title">PF investiga ameaça do Comando Vermelho na COP30 - Brasil 247</h3><div class="news-meta"><span>📅 07/11/2025 - 07:47</span></div>
+            <a href="https://tinyurl.com/7ejax2jn" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Metrópoles</span></div>
+            <h3 class="news-title">PF abre inquérito para apurar ameaça de facção no Pará durante a COP30</h3><div class="news-meta"><span>📅 07/11/2025 - 07:23</span></div>
+            <a href="https://tinyurl.com/zj2py3mx" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div></section></main></div>
+    <script>
+        window.addEventListener('load', function() {
+            const primaryColor = '#00ADB5', gridColor = 'rgba(255, 255, 255, 0.1)', textColor = '#EAEAEA', secondaryTextColor = '#A0A0A0';
+            const chartColors = ['#00ADB5', '#393E46', '#4E8D7C', '#F39C12', '#E74C3C', '#9B59B6'];
+            const ctxCat = document.getElementById('chartCategorias'); if (ctxCat) new Chart(ctxCat, { type: 'doughnut', data: { labels: ["Seguran\u00e7a P\u00fablica", "Pol\u00edtica"], datasets: [{ data: [57, 2], backgroundColor: chartColors, borderColor: '#1E1E1E', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: secondaryTextColor, padding: 15 } } } } });
+            const ctxPort = document.getElementById('chartPortais'); if (ctxPort) new Chart(ctxPort, { type: 'bar', data: { labels: ["www.gov.br", "CNN Brasil", "Metr\u00f3poles", "G1", "diariodopara.com.br", "Veja", "www.brasil247.com", "www.romanews.com.br"], datasets: [{ data: [10, 4, 4, 3, 3, 2, 2, 2], backgroundColor: primaryColor, borderRadius: 4 }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { ticks: { color: secondaryTextColor }, grid: { color: gridColor } }, x: { ticks: { color: secondaryTextColor }, grid: { color: 'transparent' } } } } });
+        });
+    </script></body></html>
