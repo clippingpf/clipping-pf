@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipping - PF</title>
+    <meta property="og:title" content="Clipping de Notícias" />
+    <meta property="og:description" content="Termo Pesquisado: PF | Gerado em 19/11/2025 às 07:54 (Brasília)" />
+    <meta property="og:image" content="https://www.gov.br/pf/pt-br/principios-fundamentais/simbolos-da-policia-federal-2/emblema.png/@@images/image" />
+    <meta property="og:type" content="article" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Poppins', sans-serif; background-color: #121212; background-image: radial-gradient(circle at 1% 1%, rgba(0, 173, 181, 0.1), rgba(0,0,0,0) 30%); padding: 20px; color: #EAEAEA; line-height: 1.7; }
+        .container { max-width: 1400px; margin: 0 auto; } .header { background: rgba(30, 30, 30, 0.7); backdrop-filter: blur(10px); padding: 40px; border-radius: 16px; margin-bottom: 30px; text-align: center; border: 1px solid #333333; }
+        .header h1 { font-size: 2.8em; margin-bottom: 10px; font-weight: 700; color: #FFFFFF; } .header p { color: #A0A0A0; font-size: 1.1em; margin-top: 5px; } .highlight { color: #00ADB5; font-weight: 600; }
+        .stats-grid, .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px; }
+        .stat-card, .chart-card { background: #1E1E1E; padding: 30px; border-radius: 12px; text-align: center; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .stat-card:hover, .chart-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 173, 181, 0.2); }
+        .stat-number { font-size: 3.5em; font-weight: 700; color: #00ADB5; margin-bottom: 5px; } .stat-label { color: #A0A0A0; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px;}
+        .chart-card h3 { color: #EAEAEA; margin-bottom: 20px; font-size: 1.4em; font-weight: 600;} .chart-wrapper { position: relative; height: 320px; }
+        .news-section h2 { color: #FFFFFF; margin-bottom: 25px; font-size: 2.2em; font-weight: 700; border-bottom: 2px solid #00ADB5; padding-bottom: 10px; display: inline-block; }
+        .news-card { background: #1E1E1E; padding: 25px 30px; margin-bottom: 20px; border-radius: 12px; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, border-color 0.3s ease; }
+        .news-card:hover { transform: translateY(-3px); border-color: #00ADB5; } .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .categoria-badge { background: #00ADB5; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; font-weight: 600; text-transform: uppercase; }
+        .news-portal { font-size: 0.9em; color: #A0A0A0; } .news-title { font-size: 1.4em; color: #EAEAEA; margin-bottom: 10px; font-weight: 600; line-height: 1.4; }
+        .news-meta { font-size: 0.9em; color: #A0A0A0; margin-bottom: 20px; } .news-link { display: inline-block; background: transparent; color: #00ADB5; padding: 10px 0; text-decoration: none; font-weight: 600; transition: color 0.2s ease, transform 0.2s ease; }
+        .news-link:hover { color: #00C9D4; transform: translateX(5px); }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #121212; } ::-webkit-scrollbar-thumb { background-color: #333333; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background-color: #00ADB5; }
+    </style></head><body><div class="container">
+        <header class="header"><h1>Clipping de Notícias</h1><p>Termo Pesquisado: <span class="highlight">PF</span></p><p>19/11/2025 às 07:54 (Brasília)</p></header>
+        <main><section class="stats-grid"><div class="stat-card"><div class="stat-number">19</div><div class="stat-label">Notícias</div></div>
+        <div class="stat-card"><div class="stat-number">9</div><div class="stat-label">Portais</div></div>
+        <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Categorias</div></div></section>
+        <section class="charts-grid"><div class="chart-card"><h3>📊 Análise por Categoria</h3><div class="chart-wrapper"><canvas id="chartCategorias"></canvas></div></div>
+        <div class="chart-card"><h3>📰 Portais Mais Ativos</h3><div class="chart-wrapper"><canvas id="chartPortais"></canvas></div></div></section>
+        <section class="news-section"><h2>📋 Lista de Notícias</h2><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">PF faz ação no DF contra esquema transnacional de contrabando de migrantes</h3><div class="news-meta"><span>📅 19/11/2025 - 07:21</span></div>
+            <a href="https://tinyurl.com/3s5fu2eh" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Secretários da Prefeitura de Sorocaba fizeram reunião com empresário preso na Operação Copia e Cola, aponta relatório da PF; veja nomes</h3><div class="news-meta"><span>📅 19/11/2025 - 07:12</span></div>
+            <a href="https://tinyurl.com/3tdtpmmr" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Operação da PF mira célula criminosa no DF que facilitava entrada ilegal de migrantes da Ásia nos EUA</h3><div class="news-meta"><span>📅 19/11/2025 - 07:09</span></div>
+            <a href="https://tinyurl.com/3yx2m9ju" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">PF mira grupo criminoso em Brasília que facilitava a entrada ilegal de migrantes da Ásia nos EUA</h3><div class="news-meta"><span>📅 19/11/2025 - 07:06</span></div>
+            <a href="https://tinyurl.com/2ev6d3at" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Metrópoles</span></div>
+            <h3 class="news-title">Vazamento de imagens da prisão do dono do Master gera crise na PF</h3><div class="news-meta"><span>📅 19/11/2025 - 07:00</span></div>
+            <a href="https://tinyurl.com/46fxapzt" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 cbn.globo.com</span></div>
+            <h3 class="news-title">PF vai investigar operação bilionária do Banco Master com fundos de pensão estaduais e municipais - CBN</h3><div class="news-meta"><span>📅 19/11/2025 - 06:24</span></div>
+            <a href="https://tinyurl.com/3fvk9d6m" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">PF aponta ataque premeditado e conflito fundiário em morte de indígena Guarani Kaiowá em Iguatemi</h3><div class="news-meta"><span>📅 19/11/2025 - 06:01</span></div>
+            <a href="https://tinyurl.com/3cfnpuhf" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">PF investigará operação bilionária do Master com fundos de pensão de estados e municípios</h3><div class="news-meta"><span>📅 19/11/2025 - 04:00</span></div>
+            <a href="https://tinyurl.com/4y6epc98" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Teste de perguntas, live no YouTube e PF acionada: veja tudo sobre a anulação de questões do Enem pelo MEC</h3><div class="news-meta"><span>📅 19/11/2025 - 03:30</span></div>
+            <a href="https://tinyurl.com/mvrjv9bz" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">Caso Master: veja o jatinho do banqueiro Daniel Vorcaro apreendido pela PF</h3><div class="news-meta"><span>📅 19/11/2025 - 02:40</span></div>
+            <a href="https://tinyurl.com/s3xhwmz9" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Gestores dos bancos Master e BRB tentaram enganar o Banco Central? Veja o que diz a investigação da PF</h3><div class="news-meta"><span>📅 19/11/2025 - 00:00</span></div>
+            <a href="https://tinyurl.com/3d7je3nv" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Agência Brasil</span></div>
+            <h3 class="news-title">BRB nega bloqueio de bens após operação da PF</h3><div class="news-meta"><span>📅 18/11/2025 - 22:39</span></div>
+            <a href="https://tinyurl.com/4nvskzp3" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">Justiça Federal mantém prisão de Daniel Vorcaro após audiência de custódia</h3><div class="news-meta"><span>📅 18/11/2025 - 22:06</span></div>
+            <a href="https://tinyurl.com/4f3e3yrv" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 UOL</span></div>
+            <h3 class="news-title">Operação entre BRB e Master ocorreu por ?pura camaradagem?, diz PF - UOL Notícias</h3><div class="news-meta"><span>📅 18/11/2025 - 21:11</span></div>
+            <a href="https://tinyurl.com/3j6xm4ap" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 UOL</span></div>
+            <h3 class="news-title">Derrite recua em 5ª versão do PL Antifacção, contraria PF e atende Receita - UOL Notícias</h3><div class="news-meta"><span>📅 18/11/2025 - 21:10</span></div>
+            <a href="https://tinyurl.com/mvrv347r" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">MEC anula 3 questões do Enem e aciona PF para investigar divulgação de perguntas similares dias antes do exame</h3><div class="news-meta"><span>📅 18/11/2025 - 21:09</span></div>
+            <a href="https://tinyurl.com/4d2uyxuz" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Tecnologia</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">PF investiga desvio de R$ 300 mil de projetos ligados ao Ministério da Cultura e do Desenvolvimento Social; mandados foram cumpridos em PE</h3><div class="news-meta"><span>📅 18/11/2025 - 18:43</span></div>
+            <a href="https://tinyurl.com/yzrnrtw3" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Folha de S.Paulo</span></div>
+            <h3 class="news-title">PF apreende avião que Vorcaro usaria para deixar o país, segundo investigadores</h3><div class="news-meta"><span>📅 18/11/2025 - 18:12</span></div>
+            <a href="https://tinyurl.com/79bzcfb2" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Gazeta do Povo</span></div>
+            <h3 class="news-title">Quem é Daniel Vorcaro, dono do Banco Master preso pela PF</h3><div class="news-meta"><span>📅 18/11/2025 - 17:59</span></div>
+            <a href="https://tinyurl.com/yzepb92u" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div></section></main></div>
+    <script>
+        window.addEventListener('load', function() {
+            const primaryColor = '#00ADB5', gridColor = 'rgba(255, 255, 255, 0.1)', textColor = '#EAEAEA', secondaryTextColor = '#A0A0A0';
+            const chartColors = ['#00ADB5', '#393E46', '#4E8D7C', '#F39C12', '#E74C3C', '#9B59B6'];
+            const ctxCat = document.getElementById('chartCategorias'); if (ctxCat) new Chart(ctxCat, { type: 'doughnut', data: { labels: ["Seguran\u00e7a P\u00fablica", "Tecnologia"], datasets: [{ data: [18, 1], backgroundColor: chartColors, borderColor: '#1E1E1E', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: secondaryTextColor, padding: 15 } } } } });
+            const ctxPort = document.getElementById('chartPortais'); if (ctxPort) new Chart(ctxPort, { type: 'bar', data: { labels: ["G1", "O Globo", "CNN Brasil", "UOL", "Ag\u00eancia Brasil", "cbn.globo.com", "Gazeta do Povo", "Folha de S.Paulo"], datasets: [{ data: [5, 4, 3, 2, 1, 1, 1, 1], backgroundColor: primaryColor, borderRadius: 4 }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { ticks: { color: secondaryTextColor }, grid: { color: gridColor } }, x: { ticks: { color: secondaryTextColor }, grid: { color: 'transparent' } } } } });
+        });
+    </script></body></html>
