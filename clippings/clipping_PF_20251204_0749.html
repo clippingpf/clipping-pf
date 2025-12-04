@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipping - PF</title>
+    <meta property="og:title" content="Clipping de Notícias" />
+    <meta property="og:description" content="Termo Pesquisado: PF | Gerado em 04/12/2025 às 07:49 (Brasília)" />
+    <meta property="og:image" content="https://www.gov.br/pf/pt-br/principios-fundamentais/simbolos-da-policia-federal-2/emblema.png/@@images/image" />
+    <meta property="og:type" content="article" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Poppins', sans-serif; background-color: #121212; background-image: radial-gradient(circle at 1% 1%, rgba(0, 173, 181, 0.1), rgba(0,0,0,0) 30%); padding: 20px; color: #EAEAEA; line-height: 1.7; }
+        .container { max-width: 1400px; margin: 0 auto; } .header { background: rgba(30, 30, 30, 0.7); backdrop-filter: blur(10px); padding: 40px; border-radius: 16px; margin-bottom: 30px; text-align: center; border: 1px solid #333333; }
+        .header h1 { font-size: 2.8em; margin-bottom: 10px; font-weight: 700; color: #FFFFFF; } .header p { color: #A0A0A0; font-size: 1.1em; margin-top: 5px; } .highlight { color: #00ADB5; font-weight: 600; }
+        .stats-grid, .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px; }
+        .stat-card, .chart-card { background: #1E1E1E; padding: 30px; border-radius: 12px; text-align: center; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .stat-card:hover, .chart-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 173, 181, 0.2); }
+        .stat-number { font-size: 3.5em; font-weight: 700; color: #00ADB5; margin-bottom: 5px; } .stat-label { color: #A0A0A0; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px;}
+        .chart-card h3 { color: #EAEAEA; margin-bottom: 20px; font-size: 1.4em; font-weight: 600;} .chart-wrapper { position: relative; height: 320px; }
+        .news-section h2 { color: #FFFFFF; margin-bottom: 25px; font-size: 2.2em; font-weight: 700; border-bottom: 2px solid #00ADB5; padding-bottom: 10px; display: inline-block; }
+        .news-card { background: #1E1E1E; padding: 25px 30px; margin-bottom: 20px; border-radius: 12px; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, border-color 0.3s ease; }
+        .news-card:hover { transform: translateY(-3px); border-color: #00ADB5; } .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .categoria-badge { background: #00ADB5; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; font-weight: 600; text-transform: uppercase; }
+        .news-portal { font-size: 0.9em; color: #A0A0A0; } .news-title { font-size: 1.4em; color: #EAEAEA; margin-bottom: 10px; font-weight: 600; line-height: 1.4; }
+        .news-meta { font-size: 0.9em; color: #A0A0A0; margin-bottom: 20px; } .news-link { display: inline-block; background: transparent; color: #00ADB5; padding: 10px 0; text-decoration: none; font-weight: 600; transition: color 0.2s ease, transform 0.2s ease; }
+        .news-link:hover { color: #00C9D4; transform: translateX(5px); }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #121212; } ::-webkit-scrollbar-thumb { background-color: #333333; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background-color: #00ADB5; }
+    </style></head><body><div class="container">
+        <header class="header"><h1>Clipping de Notícias</h1><p>Termo Pesquisado: <span class="highlight">PF</span></p><p>04/12/2025 às 07:49 (Brasília)</p></header>
+        <main><section class="stats-grid"><div class="stat-card"><div class="stat-number">22</div><div class="stat-label">Notícias</div></div>
+        <div class="stat-card"><div class="stat-number">8</div><div class="stat-label">Portais</div></div>
+        <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">Categorias</div></div></section>
+        <section class="charts-grid"><div class="chart-card"><h3>📊 Análise por Categoria</h3><div class="chart-wrapper"><canvas id="chartCategorias"></canvas></div></div>
+        <div class="chart-card"><h3>📰 Portais Mais Ativos</h3><div class="chart-wrapper"><canvas id="chartPortais"></canvas></div></div></section>
+        <section class="news-section"><h2>📋 Lista de Notícias</h2><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">PF apreende mochila de Bacellar com R$ 91 mil em carro oficial da Alerj, que o levou a sede da superintendência, e três celulares</h3><div class="news-meta"><span>📅 03/12/2025 - 20:56</span></div>
+            <a href="https://tinyurl.com/56keards" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">PF apreende R$ 90 mil em espécie em carro oficial de Rodrigo Bacellar</h3><div class="news-meta"><span>📅 03/12/2025 - 19:36</span></div>
+            <a href="https://tinyurl.com/3wc84ty5" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Veja</span></div>
+            <h3 class="news-title">VÍDEO: PF encontra mais de R$ 90 mil no carro de Rodrigo Bacellar - VEJA</h3><div class="news-meta"><span>📅 03/12/2025 - 19:30</span></div>
+            <a href="https://tinyurl.com/4ktjcar8" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 UOL</span></div>
+            <h3 class="news-title">Bacellar orientou TH Joias a esvaziar a casa em véspera de operação, diz PF - UOL Notícias</h3><div class="news-meta"><span>📅 03/12/2025 - 19:15</span></div>
+            <a href="https://tinyurl.com/9udktuuu" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Advogado de Rodrigo Bacellar, preso pela PF, diz que deputado 'está confiante' de que Alerj revogará a prisão</h3><div class="news-meta"><span>📅 03/12/2025 - 19:14</span></div>
+            <a href="https://tinyurl.com/mpca8mkd" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Após determinação de Dias Toffoli, PF recolhe arquivos referentes a 18 processos da 13ª Vara da Justiça Federal em Curitiba</h3><div class="news-meta"><span>📅 03/12/2025 - 18:54</span></div>
+            <a href="https://tinyurl.com/2jy29ev9" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 UOL</span></div>
+            <h3 class="news-title">Condenados, Anderson Torres e Ramagem são demitidos da Polícia Federal - UOL Notícias</h3><div class="news-meta"><span>📅 03/12/2025 - 18:00</span></div>
+            <a href="https://tinyurl.com/2xrv4nj3" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Folha de S.Paulo</span></div>
+            <h3 class="news-title">PF vê relação entre manobra de Castro e Bacellar para poupar TH Joias com vazamento para proteger CV</h3><div class="news-meta"><span>📅 03/12/2025 - 17:34</span></div>
+            <a href="https://tinyurl.com/4y59zavj" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Agência Brasil</span></div>
+            <h3 class="news-title">Anderson Torres e Ramagem são demitidos da PF após condenação</h3><div class="news-meta"><span>📅 03/12/2025 - 17:17</span></div>
+            <a href="https://tinyurl.com/2uj68r7k" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Rodrigo Bacellar vai passar a noite na Superintendência da PF após prisão; R$ 90 mil foram apreendidos no carro dele</h3><div class="news-meta"><span>📅 03/12/2025 - 16:56</span></div>
+            <a href="https://tinyurl.com/2tmth5mp" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Rodrigo Bacellar ficará preso na superintendência da PF no Rio; parlamentar tem direito à sala de Estado Maior</h3><div class="news-meta"><span>📅 03/12/2025 - 16:54</span></div>
+            <a href="https://tinyurl.com/yzdpe3rx" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Português da lista vermelha da Interpol é capturado pela PF em MS</h3><div class="news-meta"><span>📅 04/12/2025 - 07:20</span></div>
+            <a href="https://tinyurl.com/2s3w3a89" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Bacellar foi procurado por Brazão, réu no Caso Marielle, na mesma semana da prisão de conselheiro do TCE; PF antecipou operação</h3><div class="news-meta"><span>📅 04/12/2025 - 04:30</span></div>
+            <a href="https://tinyurl.com/mwk4jme4" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">O PF, tal qual a boa política, vive da harmonia: é simples, direto, democrático</h3><div class="news-meta"><span>📅 04/12/2025 - 04:30</span></div>
+            <a href="https://tinyurl.com/3fkubsh9" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Preso pela PF, Bacellar é autor do 'Pacote de Enfrentamento ao Crime' no RJ: 'resgatar a confiança da população'</h3><div class="news-meta"><span>📅 04/12/2025 - 04:01</span></div>
+            <a href="https://tinyurl.com/5fz3c2tv" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Presidente da Alerj vai passar a noite preso na PF</h3><div class="news-meta"><span>📅 04/12/2025 - 01:22</span></div>
+            <a href="https://tinyurl.com/3ubsjkts" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">‘Carta Picciani’: entenda manobra do governo com Bacellar que chamou a atenção da PF</h3><div class="news-meta"><span>📅 04/12/2025 - 01:00</span></div>
+            <a href="https://tinyurl.com/yzd9tycz" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Polícia Federal diz que vazamento teria possível objetivo de manter relação de políticos com CV de olho em 2026</h3><div class="news-meta"><span>📅 04/12/2025 - 01:00</span></div>
+            <a href="https://tinyurl.com/49c7b5rs" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 UOL</span></div>
+            <h3 class="news-title">PF encontra R$ 90 mil em dinheiro vivo no carro de Rodrigo Bacellar - UOL Notícias</h3><div class="news-meta"><span>📅 04/12/2025 - 00:04</span></div>
+            <a href="https://tinyurl.com/2p9nbjjk" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 extra.globo.com</span></div>
+            <h3 class="news-title">PF afirma que vazamento teria possível objetivo de manter relação de políticos com CV de olho em 2026 - Extra online</h3><div class="news-meta"><span>📅 04/12/2025 - 00:01</span></div>
+            <a href="https://tinyurl.com/4bevee7w" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Preso pela PF, Rodrigo Bacellar enfrenta pedido de cassação no TSE</h3><div class="news-meta"><span>📅 04/12/2025 - 00:00</span></div>
+            <a href="https://tinyurl.com/yf5e7rjn" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">PF investiga vírus que afeta ararinhas-azuis de programa de reintrodução; celulares e computadores foram apreendidos</h3><div class="news-meta"><span>📅 03/12/2025 - 21:12</span></div>
+            <a href="https://tinyurl.com/n998dypd" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div></section></main></div>
+    <script>
+        window.addEventListener('load', function() {
+            const primaryColor = '#00ADB5', gridColor = 'rgba(255, 255, 255, 0.1)', textColor = '#EAEAEA', secondaryTextColor = '#A0A0A0';
+            const chartColors = ['#00ADB5', '#393E46', '#4E8D7C', '#F39C12', '#E74C3C', '#9B59B6'];
+            const ctxCat = document.getElementById('chartCategorias'); if (ctxCat) new Chart(ctxCat, { type: 'doughnut', data: { labels: ["Seguran\u00e7a P\u00fablica"], datasets: [{ data: [22], backgroundColor: chartColors, borderColor: '#1E1E1E', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: secondaryTextColor, padding: 15 } } } } });
+            const ctxPort = document.getElementById('chartPortais'); if (ctxPort) new Chart(ctxPort, { type: 'bar', data: { labels: ["O Globo", "G1", "UOL", "Ag\u00eancia Brasil", "CNN Brasil", "Veja", "extra.globo.com", "Folha de S.Paulo"], datasets: [{ data: [10, 4, 3, 1, 1, 1, 1, 1], backgroundColor: primaryColor, borderRadius: 4 }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { ticks: { color: secondaryTextColor }, grid: { color: gridColor } }, x: { ticks: { color: secondaryTextColor }, grid: { color: 'transparent' } } } } });
+        });
+    </script></body></html>
