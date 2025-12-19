@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipping - PF</title>
+    <meta property="og:title" content="Clipping de Notícias" />
+    <meta property="og:description" content="Termo Pesquisado: PF | Gerado em 19/12/2025 às 08:07 (Brasília)" />
+    <meta property="og:image" content="https://www.gov.br/pf/pt-br/principios-fundamentais/simbolos-da-policia-federal-2/emblema.png/@@images/image" />
+    <meta property="og:type" content="article" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Poppins', sans-serif; background-color: #121212; background-image: radial-gradient(circle at 1% 1%, rgba(0, 173, 181, 0.1), rgba(0,0,0,0) 30%); padding: 20px; color: #EAEAEA; line-height: 1.7; }
+        .container { max-width: 1400px; margin: 0 auto; } .header { background: rgba(30, 30, 30, 0.7); backdrop-filter: blur(10px); padding: 40px; border-radius: 16px; margin-bottom: 30px; text-align: center; border: 1px solid #333333; }
+        .header h1 { font-size: 2.8em; margin-bottom: 10px; font-weight: 700; color: #FFFFFF; } .header p { color: #A0A0A0; font-size: 1.1em; margin-top: 5px; } .highlight { color: #00ADB5; font-weight: 600; }
+        .stats-grid, .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px; }
+        .stat-card, .chart-card { background: #1E1E1E; padding: 30px; border-radius: 12px; text-align: center; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .stat-card:hover, .chart-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 173, 181, 0.2); }
+        .stat-number { font-size: 3.5em; font-weight: 700; color: #00ADB5; margin-bottom: 5px; } .stat-label { color: #A0A0A0; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px;}
+        .chart-card h3 { color: #EAEAEA; margin-bottom: 20px; font-size: 1.4em; font-weight: 600;} .chart-wrapper { position: relative; height: 320px; }
+        .news-section h2 { color: #FFFFFF; margin-bottom: 25px; font-size: 2.2em; font-weight: 700; border-bottom: 2px solid #00ADB5; padding-bottom: 10px; display: inline-block; }
+        .news-card { background: #1E1E1E; padding: 25px 30px; margin-bottom: 20px; border-radius: 12px; border: 1px solid #333333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, border-color 0.3s ease; }
+        .news-card:hover { transform: translateY(-3px); border-color: #00ADB5; } .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .categoria-badge { background: #00ADB5; color: #FFFFFF; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; font-weight: 600; text-transform: uppercase; }
+        .news-portal { font-size: 0.9em; color: #A0A0A0; } .news-title { font-size: 1.4em; color: #EAEAEA; margin-bottom: 10px; font-weight: 600; line-height: 1.4; }
+        .news-meta { font-size: 0.9em; color: #A0A0A0; margin-bottom: 20px; } .news-link { display: inline-block; background: transparent; color: #00ADB5; padding: 10px 0; text-decoration: none; font-weight: 600; transition: color 0.2s ease, transform 0.2s ease; }
+        .news-link:hover { color: #00C9D4; transform: translateX(5px); }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #121212; } ::-webkit-scrollbar-thumb { background-color: #333333; border-radius: 10px; } ::-webkit-scrollbar-thumb:hover { background-color: #00ADB5; }
+    </style></head><body><div class="container">
+        <header class="header"><h1>Clipping de Notícias</h1><p>Termo Pesquisado: <span class="highlight">PF</span></p><p>19/12/2025 às 08:07 (Brasília)</p></header>
+        <main><section class="stats-grid"><div class="stat-card"><div class="stat-number">22</div><div class="stat-label">Notícias</div></div>
+        <div class="stat-card"><div class="stat-number">9</div><div class="stat-label">Portais</div></div>
+        <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">Categorias</div></div></section>
+        <section class="charts-grid"><div class="chart-card"><h3>📊 Análise por Categoria</h3><div class="chart-wrapper"><canvas id="chartCategorias"></canvas></div></div>
+        <div class="chart-card"><h3>📰 Portais Mais Ativos</h3><div class="chart-wrapper"><canvas id="chartPortais"></canvas></div></div></section>
+        <section class="news-section"><h2>📋 Lista de Notícias</h2><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Gazeta do Povo</span></div>
+            <h3 class="news-title">Moraes autoriza PF a interrogar Bolsonaro sobre material de cofres do Alvorada</h3><div class="news-meta"><span>📅 18/12/2025 - 20:58</span></div>
+            <a href="https://tinyurl.com/33edtrwm" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Agência Brasil</span></div>
+            <h3 class="news-title">Moraes autoriza oitiva de Bolsonaro sobre material achado no Alvorada</h3><div class="news-meta"><span>📅 18/12/2025 - 19:38</span></div>
+            <a href="https://tinyurl.com/2afnfsxu" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Operação da PF contra contrabando e distribuição ilegal de cigarros investiga Adilsinho e faz buscas no RJ e no ES</h3><div class="news-meta"><span>📅 18/12/2025 - 17:37</span></div>
+            <a href="https://tinyurl.com/ypfej9a3" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">PF apreende dinheiro em espécie na casa de Sóstenes Cavalcante; veja fotos</h3><div class="news-meta"><span>📅 19/12/2025 - 08:01</span></div>
+            <a href="https://tinyurl.com/y7ctybdh" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 cbn.globo.com</span></div>
+            <h3 class="news-title">Jordy chama busca e apreensão da PF em sua casa de 'perseguição implacável' - CBN</h3><div class="news-meta"><span>📅 19/12/2025 - 07:59</span></div>
+            <a href="https://tinyurl.com/44r2ur5r" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">Alvo da PF por desvio de cotas, Jordy fala em "perseguição implacável"</h3><div class="news-meta"><span>📅 19/12/2025 - 07:51</span></div>
+            <a href="https://tinyurl.com/dsc8xcu9" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Folha de S.Paulo</span></div>
+            <h3 class="news-title">PF faz buscas contra Sóstenes e Jordy, deputados do PL</h3><div class="news-meta"><span>📅 19/12/2025 - 07:51</span></div>
+            <a href="https://tinyurl.com/7rmf56z8" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Alvo da PF por desvio de cotas parlamentares, deputado Carlos Jordy diz ser alvo de perseguição</h3><div class="news-meta"><span>📅 19/12/2025 - 07:49</span></div>
+            <a href="https://tinyurl.com/28brj677" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Veja</span></div>
+            <h3 class="news-title">PF apreende mais de R$ 400 mil reais em dinheiro vivo com líder do PL - VEJA</h3><div class="news-meta"><span>📅 19/12/2025 - 07:47</span></div>
+            <a href="https://tinyurl.com/p59r5kw5" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 cbn.globo.com</span></div>
+            <h3 class="news-title">Sóstenes Cavalcanti e Carlos Jordy são alvos de operação da PF contra desvio de cotas parlamentares - CBN</h3><div class="news-meta"><span>📅 19/12/2025 - 07:36</span></div>
+            <a href="https://tinyurl.com/23m4nh7e" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">Sóstenes e Jordy são alvos de operação da PF para apurar desvios de cotas parlamentares</h3><div class="news-meta"><span>📅 19/12/2025 - 07:31</span></div>
+            <a href="https://tinyurl.com/56vnsacf" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 CNN Brasil</span></div>
+            <h3 class="news-title">Sóstenes e Jordy são alvo da PF por desvio de cota parlamentar</h3><div class="news-meta"><span>📅 19/12/2025 - 07:29</span></div>
+            <a href="https://tinyurl.com/mpu35eab" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Quem é Sóstenes Cavalcante, deputado do PL alvo da PF nesta sexta-feira</h3><div class="news-meta"><span>📅 19/12/2025 - 07:29</span></div>
+            <a href="https://tinyurl.com/y7s57pze" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Veja</span></div>
+            <h3 class="news-title">PF cumpre mandados contra Sóstenes e Jordy por corrupção envolvendo emendas - VEJA</h3><div class="news-meta"><span>📅 19/12/2025 - 07:29</span></div>
+            <a href="https://tinyurl.com/5n8sfuse" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Metrópoles</span></div>
+            <h3 class="news-title">Líder do PL na Câmara é alvo de operação da PF</h3><div class="news-meta"><span>📅 19/12/2025 - 07:23</span></div>
+            <a href="https://tinyurl.com/2wnv26h5" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Mensagens de celulares e depoimentos de assessores levaram PF até Sostenes e Jordy</h3><div class="news-meta"><span>📅 19/12/2025 - 07:21</span></div>
+            <a href="https://tinyurl.com/2cxybhv6" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">PF faz operação contra desvio de cotas parlamentares; deputados do PL são alvo de mandados de busca</h3><div class="news-meta"><span>📅 19/12/2025 - 07:13</span></div>
+            <a href="https://tinyurl.com/c83byec6" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 Metrópoles</span></div>
+            <h3 class="news-title">PF: Sóstenes e Jordy são alvo de busca por desvio em cota parlamentar</h3><div class="news-meta"><span>📅 19/12/2025 - 07:11</span></div>
+            <a href="https://tinyurl.com/yz4rbs33" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 cbn.globo.com</span></div>
+            <h3 class="news-title">Presidente da CPMI do INSS quer prorrogar trabalhos após nova operação da PF - CBN</h3><div class="news-meta"><span>📅 19/12/2025 - 06:18</span></div>
+            <a href="https://tinyurl.com/5dpf4nnf" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Fraude no INSS: PF mirou em senador, dona de agência de campanhas do PT e ex-diretor sob Bolsonaro; veja núcleos do grupo</h3><div class="news-meta"><span>📅 19/12/2025 - 04:00</span></div>
+            <a href="https://tinyurl.com/49s87x2k" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 O Globo</span></div>
+            <h3 class="news-title">PF detalha teia de relações de Weverton e suspeitos de desvios nas aposentadorias</h3><div class="news-meta"><span>📅 19/12/2025 - 00:00</span></div>
+            <a href="https://tinyurl.com/3mctrfhx" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div><div class="news-card">
+            <div class="card-header"><span class="categoria-badge">Segurança Pública</span><span class="news-portal">🌐 G1</span></div>
+            <h3 class="news-title">Fraude do INSS: PF prende secretário-executivo do Ministério da Previdência e faz buscas em endereços do senador Weverton Rocha, do PDT</h3><div class="news-meta"><span>📅 18/12/2025 - 21:19</span></div>
+            <a href="https://tinyurl.com/ys37vwzj" target="_blank" class="news-link">Ver Notícia Completa &rarr;</a></div></section></main></div>
+    <script>
+        window.addEventListener('load', function() {
+            const primaryColor = '#00ADB5', gridColor = 'rgba(255, 255, 255, 0.1)', textColor = '#EAEAEA', secondaryTextColor = '#A0A0A0';
+            const chartColors = ['#00ADB5', '#393E46', '#4E8D7C', '#F39C12', '#E74C3C', '#9B59B6'];
+            const ctxCat = document.getElementById('chartCategorias'); if (ctxCat) new Chart(ctxCat, { type: 'doughnut', data: { labels: ["Seguran\u00e7a P\u00fablica"], datasets: [{ data: [22], backgroundColor: chartColors, borderColor: '#1E1E1E', borderWidth: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: secondaryTextColor, padding: 15 } } } } });
+            const ctxPort = document.getElementById('chartPortais'); if (ctxPort) new Chart(ctxPort, { type: 'bar', data: { labels: ["G1", "CNN Brasil", "cbn.globo.com", "Metr\u00f3poles", "Veja", "O Globo", "Gazeta do Povo", "Ag\u00eancia Brasil"], datasets: [{ data: [7, 3, 3, 2, 2, 2, 1, 1], backgroundColor: primaryColor, borderRadius: 4 }] }, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { ticks: { color: secondaryTextColor }, grid: { color: gridColor } }, x: { ticks: { color: secondaryTextColor }, grid: { color: 'transparent' } } } } });
+        });
+    </script></body></html>
